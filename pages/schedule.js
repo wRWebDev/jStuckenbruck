@@ -1,7 +1,6 @@
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
-
-// import page content
+import Content from '../components/Content/Schedule'
 
 const pageDetails = {
   name: 'events',
@@ -16,7 +15,7 @@ const Page = ({ content }) => {
   return (
     <>
       <HouseStyle properties={pageDetails}>
-        Page Content
+        <Content content={content} />
       </HouseStyle>
     </>
   )
