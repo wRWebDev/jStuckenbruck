@@ -15,7 +15,7 @@ const Page = ({ content }) => {
   return (
     <>
       <HouseStyle properties={pageDetails}>
-        <Content />
+        <Content content={content} />
       </HouseStyle>
     </>
   )

@@ -1,3 +1,5 @@
+import ContactForm from '../ContactForm'
+
 const Content = ({ content }) => {
 
     const { title, body } = content
@@ -7,6 +9,9 @@ const Content = ({ content }) => {
             <div className="normal-page-wrapper">
                 <h1>{title}</h1>
                 <p>{body}</p>
+                <ContactForm />
+                <h2 style={{marginTop: '20pt'}}>Social Media</h2>
+                <p>Follow Johann on social media, using the links below:</p>
             </div>
         </>
     )

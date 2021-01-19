@@ -10,17 +10,17 @@ const images = [
 const folder = 'gallery'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Keyboard, Autoplay, EffectCoverflow } from 'swiper' 
+import SwiperCore, { Keyboard, Mousewheel, EffectCoverflow } from 'swiper' 
 import Image from 'next/image'
 
 const CoverFlowCarousel = ({ }) => {
 
-    SwiperCore.use([Keyboard, EffectCoverflow])
+    SwiperCore.use([Keyboard, Mousewheel, EffectCoverflow])
 
     return (
         <Swiper
             effect="coverflow"
-            slidesPerView={1.8}
+            slidesPerView={1.5}
             coverflowEffect={{
                 rotate: 45,
                 modifier: 1,
@@ -32,6 +32,7 @@ const CoverFlowCarousel = ({ }) => {
             loopedSlides={images.length}
             keyboard={true}
             speed={450}
+            mousewheel={true}
         >
             {
                 images.map(img => (
