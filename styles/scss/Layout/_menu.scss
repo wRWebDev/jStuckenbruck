@@ -1,0 +1,92 @@
+#menu {
+	z-index: 2;
+	position: fixed;
+	top: $desktop-header-height;
+	right: -600px;
+	width: 300px;
+	height: calc(100vh - #{$desktop-header-height});
+	padding: 30pt $desktop-margin;
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	justify-content: center;
+	transition: right ease-in-out 0.4s;
+	// Bring into view
+	&.showing {
+		right: 0;
+	}
+	// Menu items
+	ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+		li {
+            position: relative;
+            float: right;
+            width: auto;
+            display: block;
+			text-transform: lowercase;
+			font-size: 24px;
+			text-align: right;
+			padding: 3px 0;
+			margin: 5px 0;
+			// Hidden underlining of menu items
+			span {
+				position: absolute;
+				display: block;
+				bottom: 0;
+				right: 0;
+				width: 0;
+				height: 2px;
+				transition: width ease-in-out 0.2s;
+			}
+			// Animate underlining the menu items
+			&:hover {
+				span {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Sociam media icons
+//	positioned side by side
+#social-media-menu {
+	margin-top: 30pt;
+
+	ul {
+		list-style: none;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: flex-end;
+		li {
+			// Resize svgs to 36x36px
+			.menu-socmed-icon {
+				width: 36px;
+				height: 36px;
+				margin-left: 10px;
+				// On hover edit fill color
+				&:hover {
+					.facebook {
+						fill: #2a6fc9;
+					}
+					.instagram {
+						fill: #ca2d8c;
+					}
+					.instagram_lens {
+						fill: #8d1ea3;
+					}
+					.twitter {
+						fill: #2c88ff;
+					}
+					.youtube {
+						fill: #c61a1a;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+// Layout
+.flex-center{display: flex; align-items: center; justify-content: center;}
+.column{flex-direction: column}
+.row{flex-direction: row}
+.normal-page-wrapper{
+    @include margins-as-paddings;
+    padding-top: 15pt;
+    padding-bottom: 15pt;
+}
+
+// Colours
+.dark-background{background: $dark;}
+.light-background{background: $light;}
+.dark-text{color: $dark}
+.light-text{color: $light}
+
+// Images
+.loading-background{
+    background-color: #252525;
+    background-image: url('/img/house/loader-white.gif');
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Parallax
+.parallax-bg{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+}
+
+.parallax-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100%;
+    width: 58% !important;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(247, 247, 247, 0.5);
+    backdrop-filter: blur(1rem);
+    transition: all ease 0.2s;
+    @media only screen and (max-width: $MOBILE){
+        width: 100% !important;
+    }
+
+    &.title-card, &.quote{
+        background-color: rgba(48, 92, 67, 0.5);
+        color: $light;
+    }
+
+    &.quote::before{
+        content: "“";
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-size: 10rem;
+        font-family: 'Times New Roman', serif;
+        color: rgba(255, 255, 255, 0.4);
+    }
+    &.quote::after{
+        content: "”";
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        font-size: 10rem;
+        font-family: 'Times New Roman', serif;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 2rem;
+    }
+
+}

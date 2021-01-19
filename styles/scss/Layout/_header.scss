@@ -1,0 +1,102 @@
+header{
+	position: fixed;
+	width: 100vw;
+	height: $desktop-header-height;
+	top: 0;
+	left: 0;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include margins-as-paddings;
+    padding-top: 10pt;
+	padding-bottom: 10pt;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.15), 0 0 7px rgba(0, 0, 0, 0.2);
+	z-index: 3;
+	overflow-y: auto;
+
+	#logo{
+		h1{
+			font-size: 2rem;
+			letter-spacing: 0.02rem;
+			margin: 0;
+		}
+		h2{
+			font-size: 1.2rem;
+			letter-spacing: 0.01rem;
+			margin: 0;
+		}
+	}
+
+    #menuButton{
+        width: 25px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+        cursor: pointer;
+        
+        .hamburger{
+            height: 3px;
+			margin: 2px 0;
+			transition: all ease-in-out 0.2s;
+            // make each line a different length
+			&:nth-child(1) {
+				width: 50%;
+			}
+			&:nth-child(2) {
+				width: 100%;
+			}
+			&:nth-child(3) {
+				width: 75%;
+            }
+            
+        }
+
+        // Change lengths on hover
+        &:hover {
+            .hamburger {
+                &:nth-child(1) {
+                    width: 90%;
+                }
+                &:nth-child(2) {
+                    width: 30%;
+                }
+                &:nth-child(3) {
+                    width: 45%;
+                }
+            }
+        }
+
+        // When the menu is showing
+        &.showing {
+			.hamburger {
+                // Make an X shape
+				&:nth-child(1) {
+					width: 100%;
+					transform-origin: 0 0;
+					transform: rotate(45deg) translate(2px, -2px);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(3) {
+					width: 100%;
+					transform-origin: 0 0;
+					transform: rotate(-45deg) translate(-2px, 3px);
+				}
+            }
+            
+			// reduce opacity on hover
+			&:hover {
+				.hamburger {
+					&:nth-child(1) {
+						opacity: 0.6;
+					}
+					&:nth-child(3) {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+    }
+}

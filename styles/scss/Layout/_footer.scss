@@ -1,0 +1,25 @@
+footer{
+    background: $dark;
+    color: $light;
+    padding: 30pt 50px;
+    @media only screen and (max-width: $MOBILE){
+        padding: 30pt 20px;
+    }
+    
+    h3, h4{
+        margin: 0;
+    }
+
+    nav{
+        margin: 15pt 0;
+        width: 50%;
+        ul{
+            list-style: none;
+            font-family: $content-font;
+            columns: 2;
+            font-weight: 300;
+            font-size: 0.89rem;
+        }
+    }
+
+}

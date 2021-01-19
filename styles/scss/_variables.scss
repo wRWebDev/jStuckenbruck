@@ -1,0 +1,29 @@
+$MOBILE: 700px;
+
+$heading-font: 'Didact Gothic', sans-serif;
+$content-font: 'Montserrat', sans-serif;
+
+$dark: #000;
+$light: #fff;
+$grey: #f7f7f7;
+
+$desktop-margin: 50px;
+$mobile-margin: 20px;
+
+$desktop-header-height: 95px;
+
+@mixin margins-as-margins{
+    margin: 0 $desktop-margin;
+    @media only screen and (max-width: $MOBILE){
+        margin: 0 $mobile-margin;
+    }
+}
+
+@mixin margins-as-paddings{
+    padding-left: $desktop-margin;
+    padding-right: $desktop-margin;
+    @media only screen and (max-width: $MOBILE){
+        padding-left: $mobile-margin;
+        padding-right: $mobile-margin;
+    }
+}
