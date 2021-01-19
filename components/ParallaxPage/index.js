@@ -10,7 +10,7 @@ const ParallaxPage = ({ folder, image, children }) => {
             direction="vertical"
             speed={1000}
             parallax={true}
-            style={{height: '100vh', paddingTop: '95px'}}
+            style={{height: 'calc(100vh - 95px)', overflowY: 'hidden'}}
             mousewheel={true}
             effect="fade"
             fadeEffect={{
@@ -21,7 +21,7 @@ const ParallaxPage = ({ folder, image, children }) => {
             <div 
                 className="parallax-bg"
                 style={{
-                    backgroundImage: `url(/img/${folder}/${image})`
+                    backgroundImage: `url(/img/${folder}/${image})`,
                 }}   
                 data-swiper-parallax="-10%"
             />
