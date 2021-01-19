@@ -41,4 +41,92 @@ h1{font-size: 3rem;}
 h2{font-size: 1.8rem;}
 h3{font-size: 1.2rem;}
 h4{font-size: 1rem;}
-p{font-size: 1rem}
+p{font-size: 1rem; line-height: 1.5rem;}
+
+button, input{
+    &:focus{outline: none}
+}
+
+button{
+    cursor: pointer;
+}
+
+#home-button{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    bottom: 15%;
+    padding: 8pt 20pt 10pt;
+    border-radius: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(1rem);
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.15);
+    &:hover{background-color: rgba(0,0,0,0.8)}
+    h4{
+        font-family: $content-font;
+        font-weight: 300;
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    img{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 10pt;
+        animation: struggle-right 1000ms ease infinite;
+    }   
+}
+
+#download-button{
+    margin-top: 10pt;
+    border: none;
+    bottom: 15%;
+    padding: 8pt 20pt 10pt;
+    border-radius: 100vw;
+    background-color: rgba(31, 97, 45, 0.5);
+    backdrop-filter: blur(1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.15);
+    &:hover{background-color: rgba(2, 29, 11, 0.8)}
+    h4{
+        font-family: $content-font;
+        font-weight: 300;
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: #fff;
+    }
+}
+
+.struggle-arrow-down{
+    animation: struggle-down 1000ms ease infinite;
+}
+
+@keyframes struggle-right {
+    0% {transform: translateX(0)}
+    35% {transform: translateX(7px)}
+    43% {transform: translateX(4px)}
+    50% {transform: translateX(6px)}
+    57% {transform: translateX(4px)}
+    64% {transform: translateX(7px)}
+    100% {transform: translateX(0)}
+}
+@keyframes struggle-down {
+    0% {transform: translateY(0) rotate(90deg)}
+    35% {transform: translateY(7px) rotate(90deg)}
+    43% {transform: translateY(4px) rotate(90deg)}
+    50% {transform: translateY(6px) rotate(90deg)}
+    57% {transform: translateY(4px) rotate(90deg)}
+    64% {transform: translateY(7px) rotate(90deg)}
+    100% {transform: translateY(0) rotate(90deg)}
+}

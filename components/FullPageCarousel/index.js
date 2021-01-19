@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 
 
 SwiperCore.use([Keyboard, Autoplay, EffectFade])
-const FullPageCarousel = ({ folder, images }) => {
+const FullPageCarousel = ({ folder, images, children }) => {
     return (
         <Swiper
             loop={true}
@@ -33,6 +33,7 @@ const FullPageCarousel = ({ folder, images }) => {
                 />
             ))
         }
+        { children }
         </Swiper>
     )
 }

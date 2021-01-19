@@ -58,6 +58,230 @@ h4 {
 
 p {
   font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+#home-button {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: none;
+  bottom: 15%;
+  padding: 8pt 20pt 10pt;
+  border-radius: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  color: #fff;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#home-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#home-button h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+#home-button img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 10pt;
+  -webkit-animation: struggle-right 1000ms ease infinite;
+          animation: struggle-right 1000ms ease infinite;
+}
+
+#download-button {
+  margin-top: 10pt;
+  border: none;
+  bottom: 15%;
+  padding: 8pt 20pt 10pt;
+  border-radius: 100vw;
+  background-color: rgba(31, 97, 45, 0.5);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#download-button:hover {
+  background-color: rgba(2, 29, 11, 0.8);
+}
+
+#download-button h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: #fff;
+}
+
+.struggle-arrow-down {
+  -webkit-animation: struggle-down 1000ms ease infinite;
+          animation: struggle-down 1000ms ease infinite;
+}
+
+@-webkit-keyframes struggle-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  43% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+  50% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  57% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+  64% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes struggle-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  43% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+  50% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  57% {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+  64% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes struggle-down {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  35% {
+    -webkit-transform: translateY(7px) rotate(90deg);
+            transform: translateY(7px) rotate(90deg);
+  }
+  43% {
+    -webkit-transform: translateY(4px) rotate(90deg);
+            transform: translateY(4px) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(6px) rotate(90deg);
+            transform: translateY(6px) rotate(90deg);
+  }
+  57% {
+    -webkit-transform: translateY(4px) rotate(90deg);
+            transform: translateY(4px) rotate(90deg);
+  }
+  64% {
+    -webkit-transform: translateY(7px) rotate(90deg);
+            transform: translateY(7px) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes struggle-down {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  35% {
+    -webkit-transform: translateY(7px) rotate(90deg);
+            transform: translateY(7px) rotate(90deg);
+  }
+  43% {
+    -webkit-transform: translateY(4px) rotate(90deg);
+            transform: translateY(4px) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(6px) rotate(90deg);
+            transform: translateY(6px) rotate(90deg);
+  }
+  57% {
+    -webkit-transform: translateY(4px) rotate(90deg);
+            transform: translateY(4px) rotate(90deg);
+  }
+  64% {
+    -webkit-transform: translateY(7px) rotate(90deg);
+            transform: translateY(7px) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
 }
 
 .flex-center {
