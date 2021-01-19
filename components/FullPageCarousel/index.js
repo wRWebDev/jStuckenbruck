@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { nanoid } from 'nanoid'
 
 
+SwiperCore.use([Keyboard, Autoplay, EffectFade])
 const FullPageCarousel = ({ folder, images }) => {
-    SwiperCore.use([Keyboard, Autoplay, EffectFade])
     return (
         <Swiper
             loop={true}

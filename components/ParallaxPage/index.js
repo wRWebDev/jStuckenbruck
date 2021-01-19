@@ -10,7 +10,7 @@ const ParallaxPage = ({ folder, image, children }) => {
             direction="vertical"
             speed={1000}
             parallax={true}
-            style={{height: 'calc(100vh - 95px'}}
+            style={{height: '100vh', paddingTop: '95px'}}
             mousewheel={true}
             effect="fade"
             fadeEffect={{

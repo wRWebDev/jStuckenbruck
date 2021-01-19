@@ -7,7 +7,8 @@ const pageDetails = {
   title: 'Biography',
   description: 'Read Johann Stuckenbruck\'s biography.',
   image: '',
-  darkMode: false
+  darkMode: false,
+  hideFooter: true
 }
 
 const Page = ({ content }) => {
