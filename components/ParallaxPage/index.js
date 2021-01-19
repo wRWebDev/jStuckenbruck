@@ -1,14 +1,21 @@
 import SwiperCore, { Keyboard, Parallax, Mousewheel, EffectFade } from 'swiper' 
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useEffect } from 'react'
 
 const ParallaxPage = ({ folder, image, children }) => {
         
     SwiperCore.use([Keyboard, Parallax, Mousewheel, EffectFade])
 
+    useEffect(()=>{
+
+    }, [children])
+
+    console.log('rendering swiper')
+
     return (
         <Swiper
             direction="vertical"
-            speed={1000}
+            speed={800}
             parallax={true}
             style={{height: 'calc(100vh - 95px)', overflowY: 'hidden'}}
             mousewheel={true}
@@ -25,7 +32,7 @@ const ParallaxPage = ({ folder, image, children }) => {
                 }}   
                 data-swiper-parallax="-10%"
             />
-            {children}
+            { children }
         </Swiper>
 
 
