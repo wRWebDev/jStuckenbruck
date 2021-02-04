@@ -2,7 +2,7 @@ import CoverFlowCarousel from '../CoverFlowCarousel'
 import VideoGallery from '../VideoGallery'
 import firebase from '../../db/firebase'
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore'
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 const Content = ({ content }) => {
 
@@ -13,22 +13,26 @@ const Content = ({ content }) => {
     const { title, body } = content
     
     const topOfVids = useRef(3000)
-    const darkTheme = useRef(false)
-    const header = document.querySelector('header')
+    let darkTheme = false
 
     useLayoutEffect(()=>{
-        window.addEventListener('scroll', () => {  
-            if(window.scrollY > topOfVids.current){         
-                header.style = {background: 'rgba(0,0,0,0.4)', color: '#fff'}
-            }else if(window.scrollY <= topOfVids.current){
-                header.style = {background: 'rgba(255,255,255,0.5)', color: '#000'}
-            }
+        window.addEventListener('scroll', () => {
+            setInterval(()=>{
+                if(!darkTheme && (window.scrollY > topOfVids.current)){         
+                    document.querySelector('header').style.color = "#fff"
+                    document.querySelector('header').style.background = "rgba(0,0,0,0.5)"
+                    darkTheme = true
+                }else if(darkTheme && (window.scrollY <= topOfVids.current)){
+                    document.querySelector('header').style.color = "#000"
+                    document.querySelector('header').style.background = "rgba(255,255,255,0.5)"
+                    darkTheme = false
+                }
+            }, 200)
         })
     }, [])
 
     useEffect(()=>{
         if(media){
-            // header = document.querySelector('header')
             topOfVids.current = document.getElementById('videoGallery').offsetTop
         }
     },[media])
