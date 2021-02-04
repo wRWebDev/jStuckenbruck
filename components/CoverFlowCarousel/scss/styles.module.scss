@@ -1,0 +1,48 @@
+@import '../../../styles/scss/variables';
+
+.moduleWrapper{
+    margin: 0 (-$desktop-margin) 0 (-$desktop-margin);
+    padding: 13vh $desktop-margin;
+    @media only screen and (max-width: $MOBILE){
+        margin: 15pt -$mobile-margin -15pt -$mobile-margin;
+        padding: 8vh $mobile-margin;
+    }
+    background: linear-gradient($grey 0, $dark 90%);
+}
+
+.fullScreenLightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: $dark;
+    z-index: 2;
+    color: #fff;
+}
+
+.fullScreenInnerWrapper{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullScreenCloseButton{
+    position: absolute;
+    top: 15pt;
+    right: 15pt;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(25,25,25,0.4);
+    background-image: url('/img/house/close.png');
+    background-position: center;
+    background-size: 36px;
+    z-index: 2;
+    transition: all 200ms ease;
+    &:hover{
+        background-color: rgba(25,25,25,0.9);
+    }
+}

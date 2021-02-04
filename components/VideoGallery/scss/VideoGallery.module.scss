@@ -1,0 +1,87 @@
+@import '../../../styles/scss/variables';
+
+.moduleWrapper{
+    position: relative;
+    width: 100vw;
+    margin: 20pt -$desktop-margin 0 -$desktop-margin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: pink;
+    
+    @media only screen and (max-width: $MOBILE){
+        margin: 15pt calc(-1 * #{$mobile-margin}) -15pt calc(-1 * #{$mobile-margin});
+    }
+    
+    .titleBlock{
+        position: relative;
+        background: $dark;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        min-height: 50vh;
+        padding: 0 $desktop-margin;
+        @media only screen and (max-width: $MOBILE){
+            padding: 0 $mobile-margin;
+        }
+
+        h1{
+            width: 100%;
+            margin: 20pt 0;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+        }
+        p{
+            width: 100%;
+            color: #fff;
+            text-align: center;
+        }
+        a{
+            width: 40px;
+            height: 40px;
+            background-image: url(/img/house/youtube.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 20pt;
+        }
+    }
+
+    .videoContainer{
+        position: relative;
+        width: 100%;
+        background: $dark;
+        padding: 0 $desktop-margin 50pt $desktop-margin;
+        
+        @media only screen and (max-width: $MOBILE){
+            padding: 0 $mobile-margin 50pt;
+        }
+
+        h2, h3{ width: 100%; text-align: left; font-weight: 300; font-family: 'Montserrat', sans-serif;}
+        h3{margin-bottom: 25pt;}
+
+        .video{
+            position: relative;
+            height: auto;
+            width: 100%;
+            background: $dark;
+
+            iframe{
+                width: 100%;
+                height: 50vw;
+            }
+
+            .videoSliderWrapper{
+                width: 100%;
+            }
+        }
+        
+    }
+
+}
+
