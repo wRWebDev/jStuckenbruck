@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import Menu from './Menu'
 import { useState, useEffect } from 'react'
@@ -23,13 +24,28 @@ const Header = ({ darkMode }) => {
             : document.getElementById('menuButton').classList.remove('showing')
     }, [showingMenu])
 
+    useEffect(()=>{
+        if(darkMode){
+            document.querySelector('body').classList.add('dark-background')
+        }else{
+            document.querySelector('body').classList.remove('dark-background')
+        }
+    }, [])
+
     return (
         <>
-            <header className={ 
-                darkMode 
-                    ? 'dark-background light-text' 
-                    : 'light-background dark-text'
-            }>
+            <header 
+                className={ 
+                    darkMode 
+                        ? 'light-text' 
+                        : 'dark-text'
+                }
+                style={
+                    darkMode
+                        ? {background: 'rgba(0,0,0,0.1)'}
+                        : {background: 'rgba(255,255,255,0.5)'}
+                }
+            >
                 <div id="logo">
                     <Link href="/">
                         <a>
@@ -39,7 +55,7 @@ const Header = ({ darkMode }) => {
                     </Link>
                 </div>
                 <div id="menuButton"
-                    onClick={toggleMenu}
+                    onClick={() => !showingMenu ? setShowingMenuTo(true) : null}
                 >
                     <Hamburger />
                 </div>

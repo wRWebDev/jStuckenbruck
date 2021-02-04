@@ -41,7 +41,8 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: 300;
 }
 
 h2 {
@@ -439,6 +440,8 @@ header {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15), 0 0 7px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.15), 0 0 7px rgba(0, 0, 0, 0.2);
   z-index: 3;
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
   overflow-y: auto;
 }
 
@@ -456,9 +459,10 @@ header #logo h1 {
 }
 
 header #logo h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 0.01rem;
   margin: 0;
+  margin-top: -0.4rem;
 }
 
 header #menuButton {
@@ -559,6 +563,12 @@ footer nav {
   width: 50%;
 }
 
+@media only screen and (max-width: 700px) {
+  footer nav {
+    width: 100%;
+  }
+}
+
 footer nav ul {
   list-style: none;
   font-family: "Montserrat", sans-serif;
@@ -578,7 +588,7 @@ footer p {
   z-index: 2;
   position: fixed;
   top: 95px;
-  right: -600px;
+  right: -1000px;
   width: 300px;
   height: calc(100vh - 95px);
   padding: 30pt 50px;
@@ -597,6 +607,18 @@ footer p {
           justify-content: center;
   -webkit-transition: right ease-in-out 0.4s;
   transition: right ease-in-out 0.4s;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+
+@media only screen and (max-width: 700px) {
+  #menu {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 #menu.showing {
@@ -626,6 +648,13 @@ footer p {
   margin: 5px 0;
 }
 
+@media only screen and (max-width: 700px) {
+  #menu ul li {
+    float: none;
+    text-align: center;
+  }
+}
+
 #menu ul li span {
   position: absolute;
   display: block;
@@ -635,6 +664,12 @@ footer p {
   height: 2px;
   -webkit-transition: width ease-in-out 0.2s;
   transition: width ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 700px) {
+  #menu ul li span {
+    left: 0;
+  }
 }
 
 #menu ul li:hover span {

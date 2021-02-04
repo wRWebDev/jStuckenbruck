@@ -1,5 +1,5 @@
 import SwiperCore, { Keyboard, Parallax, Mousewheel, EffectFade } from 'swiper' 
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper } from 'swiper/react'
 import { useEffect } from 'react'
 
 const ParallaxPage = ({ folder, image, children }) => {

@@ -1,3 +1,4 @@
+import OutsideClickHandler from 'react-outside-click-handler'
 import { useEffect } from 'react'
 import Link from 'next/link'
 
@@ -24,7 +25,7 @@ const pages = [
     },
 ]
 
-const Menu = ({ showing, darkMode }) => {
+const Menu = ({ showing, darkMode, toggleMenu }) => {
 
     useEffect(()=>{
         showing
@@ -33,27 +34,33 @@ const Menu = ({ showing, darkMode }) => {
     }, [showing])
 
     const links = pages
-        .map((page, i) => {
-            return (
+        .map((page, i) =>
                 <Link href={page.link} key={i}>
                     <a>
                         <li>
                             {page.display}
-                            <span
-                                className={darkMode ? 'light-background' : 'dark-background'}
-                            ></span>
+                            <span className={darkMode ? 'light-background' : 'dark-background'}></span>
                         </li>
                     </a>
                 </Link>
-            )
-        })
+        )
 
     return (
-        <nav id="menu" className={darkMode ? 'dark-background light-text' : 'light-background dark-text'}>
-            <ul>
-                {links}
-            </ul>
-        </nav>
+        <OutsideClickHandler onOutsideClick={() => {if(showing){toggleMenu()}}}>
+            <nav 
+                id="menu" 
+                className={darkMode ? 'light-text' : 'dark-text'}
+                style={
+                    darkMode
+                        ? {background: 'rgba(0,0,0,0.5)'}
+                        : {background: 'rgba(255,255,255,0.5'}
+                }    
+            >
+                <ul>
+                    {links}
+                </ul>
+            </nav>
+        </OutsideClickHandler>
     )
 }
 

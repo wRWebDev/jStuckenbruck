@@ -10,24 +10,24 @@ const pageDetails = {
   darkMode: false
 }
 
-const Page = ({ content }) => {
+const Page = () => {
 
   return (
     <>
       <HouseStyle properties={pageDetails}>
-        <Content content={content} />
+        <Content />
       </HouseStyle>
     </>
   )
 }
 
-export async function getServerSideProps(ctx){
-  const pageData = await firebase
-    .firestore()
-    .collection('pages')
-    .doc(pageDetails.name)
-    .get()
-  return { props: { content: pageData.data() } }
-}
+// export async function getServerSideProps(ctx){
+//   const pageData = await firebase
+//     .firestore()
+//     .collection('pages')
+//     .doc(pageDetails.name)
+//     .get()
+//   return { props: { content: pageData.data() } }
+// }
 
 export default Page

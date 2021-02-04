@@ -2,7 +2,7 @@
 	z-index: 2;
 	position: fixed;
 	top: $desktop-header-height;
-	right: -600px;
+	right: -1000px;
 	width: 300px;
 	height: calc(100vh - #{$desktop-header-height});
 	padding: 30pt $desktop-margin;
@@ -11,6 +11,12 @@
 	align-items: right;
 	justify-content: center;
 	transition: right ease-in-out 0.4s;
+	backdrop-filter: blur(1rem);
+	@media only screen and (max-width: $MOBILE){
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
 	// Bring into view
 	&.showing {
 		right: 0;
@@ -30,6 +36,10 @@
 			text-align: right;
 			padding: 3px 0;
 			margin: 5px 0;
+			@media only screen and (max-width: $MOBILE){
+				float: none;
+				text-align: center;
+			}
 			// Hidden underlining of menu items
 			span {
 				position: absolute;
@@ -39,6 +49,9 @@
 				width: 0;
 				height: 2px;
 				transition: width ease-in-out 0.2s;
+				@media only screen and (max-width: $MOBILE){
+					left: 0;
+				}
 			}
 			// Animate underlining the menu items
 			&:hover {
