@@ -29,6 +29,7 @@ const Content = ({ content }) => {
                 }
             }, 200)
         })
+        // return window.removeEventListener('scroll')
     }, [])
 
     useEffect(()=>{

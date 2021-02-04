@@ -443,6 +443,8 @@ header {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
   overflow-y: auto;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 
 @media only screen and (max-width: 700px) {
