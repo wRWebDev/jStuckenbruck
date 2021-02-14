@@ -41,7 +41,9 @@ const CoverFlowCarousel = ({ images }) => {
                         onlyInViewport: true
                     }}
                     speed={450}
-                    mousewheel={true}
+                    mousewheel={{
+                        forceToAxis: true
+                    }}
                     onSwiper={setMainSwiperTo}
                     controller={{ control: fullScreenSwiper }}
                     // onUpdate={mainSwiper}

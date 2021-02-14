@@ -10,24 +10,50 @@ const pageDetails = {
   darkMode: false
 }
 
-const Page = () => {
-
+const Page = ({ content, upcomingEvents }) => {
   return (
     <>
       <HouseStyle properties={pageDetails}>
-        <Content />
+        <Content 
+          content={content}
+          upcomingEvents={JSON.parse(upcomingEvents)}
+        />
       </HouseStyle>
     </>
   )
 }
 
-// export async function getServerSideProps(ctx){
-//   const pageData = await firebase
-//     .firestore()
-//     .collection('pages')
-//     .doc(pageDetails.name)
-//     .get()
-//   return { props: { content: pageData.data() } }
-// }
+export async function getServerSideProps(){
+  
+  const pageData = await firebase
+  .firestore()
+  .collection('pages')
+  .doc(pageDetails.name)
+  .get()
+  
+  const now = new Date()
+  const upcomingEvents = await firebase 
+    .firestore()
+    .collection('schedule')
+    .orderBy('startDate', 'asc')
+    .where('startDate', '>=', now)
+    .limit(20)
+    .get()
+    .then(snapshot => {
+      const events = []
+      snapshot.forEach(doc => {
+        events.push(doc.data())
+      })
+      return events
+    })
+
+  console.log('1', pageData.data())
+  console.log('2', upcomingEvents)
+
+  return { props: { 
+    content: pageData.data(),
+    upcomingEvents: JSON.stringify(upcomingEvents)
+  }}
+}
 
 export default Page

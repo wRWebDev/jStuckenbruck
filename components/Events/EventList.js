@@ -1,6 +1,6 @@
 import EventCard from './EventCard'
 
-const EventList = () => {
+const EventList = ({  }) => {
     return (
         <>
             Event List

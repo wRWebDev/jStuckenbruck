@@ -33,7 +33,7 @@ const FullPageCarousel = ({ folder, images, children }) => {
                         style={{
                             width: '100%',
                             height: '100vh',
-                            backgroundImage: `url(img/${folder}/${img})`,
+                            backgroundImage: `url(${process.env.NEXT_PUBLIC_BUCKET}/media/images/${img})`,
                             backgroundPosition: 'center',
                             backgroundSize: 'cover'
                         }}

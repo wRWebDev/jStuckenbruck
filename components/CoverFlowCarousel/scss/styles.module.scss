@@ -2,12 +2,11 @@
 
 .moduleWrapper{
     margin: 0 (-$desktop-margin) 0 (-$desktop-margin);
-    padding: 13vh $desktop-margin;
+    padding: 5vh $desktop-margin;
     @media only screen and (max-width: $MOBILE){
         margin: 15pt -$mobile-margin -15pt -$mobile-margin;
-        padding: 8vh $mobile-margin;
+        padding: 5vh $mobile-margin;
     }
-    background: linear-gradient($grey 0, $dark 90%);
 }
 
 .fullScreenLightbox{

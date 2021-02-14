@@ -7,7 +7,7 @@ const pageDetails = {
   title: 'Media',
   description: 'View images and watch videos of Johann Stuckenbruck and ensembles he\'s worked with.',
   image: '',
-  darkMode: false
+  darkMode: true
 }
 
 const Page = ({ content }) => {
