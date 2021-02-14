@@ -1,0 +1,87 @@
+$themeColor: #a92626;
+
+.listWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -5pt;
+}
+
+.eventCard{
+    width: 200pt;
+    height: 200pt;
+    margin: 5pt;
+    position: relative;
+
+    .eventCardInner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        box-shadow: 2px 2px 1em rgba(0,0,0,0.1);
+
+        .cardFront, .cardBack{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border: 2px solid $themeColor;
+            h3, h4, button{
+                margin: 3pt 0;
+            }
+            h3, h4{
+                cursor: default;
+            }
+        }
+
+        .cardBack{
+            transform: rotateY(180deg);
+            button{
+                background: $themeColor;
+                color: #fff;
+                padding: 6pt 12pt;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &:hover {
+        .eventCardInner{
+            transform: rotateY(180deg)
+        }
+    }
+}
+
+.yearCard{
+    width: 200pt;
+    height: 200pt;
+    margin: 5pt;
+    position: relative;
+    div{
+        position: absolute;
+        font-size:80pt;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(1){bottom: 50%; right: 50%;color: $themeColor;}
+        &:nth-child(2){bottom: 50%; left: 50%;}
+        &:nth-child(3){top: 50%; right: 50%;}
+        &:nth-child(4){top: 50%; left: 50%;color: $themeColor;}
+    }
+}
