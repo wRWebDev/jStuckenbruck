@@ -47,9 +47,6 @@ export async function getServerSideProps(){
       return events
     })
 
-  console.log('1', pageData.data())
-  console.log('2', upcomingEvents)
-
   return { props: { 
     content: pageData.data(),
     upcomingEvents: JSON.stringify(upcomingEvents)

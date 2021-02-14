@@ -37,8 +37,6 @@ const Content = ({ content, upcomingEvents }) => {
         }
     }
 
-    console.log('Event List: ', eventList)
-
     /* Component */
     return (
         <>
