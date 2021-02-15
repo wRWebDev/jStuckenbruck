@@ -6,7 +6,7 @@ export default async function(req, res){
     
     sgMail.setApiKey(process.env.SENDGRID_SECRET_KEY)
 
-    const { senderName, senderEmail, message } = req.body
+    const { name, email, message } = req.body
 
     const emailData = {
         from: {
@@ -19,8 +19,8 @@ export default async function(req, res){
                 name: process.env.CLIENT_NAME
             }],
             dynamic_template_data: {
-                senderName,
-                senderEmail,
+                senderName: name,
+                senderEmail: email,
                 message,
                 clientName: process.env.CLIENT_NAME,
                 clientWebsite: process.env.CLIENT_WEBSITE
