@@ -1,3 +1,5 @@
+import next from 'next'
+
 const sgMail = require('@sendgrid/mail')
 
 export default async function(req, res){
@@ -6,24 +8,22 @@ export default async function(req, res){
 
     const { senderName, senderEmail, message } = req.body
 
-    const clientName = process.env.CLIENT_NAME
-    const clientEmail = process.env.CLIENT_EMAIL
-
     const emailData = {
         from: {
-            name: senderName,
-            email: senderEmail
+            name: 'Website Contact',
+            email: 'no-reply@wrweb.dev'
         },
         personalizations: [{
             to: [{
-                email: clientEmail,
-                name: clientName
+                email: process.env.CLIENT_EMAIL,
+                name: process.env.CLIENT_NAME
             }],
             dynamic_template_data: {
                 senderName,
                 senderEmail,
                 message,
-                clientName
+                clientName: process.env.CLIENT_NAME,
+                clientWebsite: process.env.CLIENT_WEBSITE
             }
         }],
         template_id: process.env.SENDGRID_EMAIL_CONTACT_CLIENT
@@ -34,6 +34,7 @@ export default async function(req, res){
         await sgMail.send(emailData)
         res.status(200).send('Message sent successfully')
     }catch (err){
+        console.error(err.message)
         res.status(400).send(`${err.message}`)
     }
 

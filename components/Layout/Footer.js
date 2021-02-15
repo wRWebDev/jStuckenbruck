@@ -44,7 +44,7 @@ const Footer = ({ hideFooter }) => {
                 <ul>{links}</ul>
             </nav>
             <p>&copy; Johann Stuckenbruck 2021&nbsp;//&nbsp;
-                <a href="https://wrweb.dev" rel="noopener noreferrer">
+                <a href="https://wrweb.dev" rel="noopener noreferrer" target="_blank">
                     Site Design @wRWebDev
                 </a>
             </p>
