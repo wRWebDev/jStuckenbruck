@@ -3,7 +3,7 @@
 .moduleWrapper{
     position: relative;
     width: 100vw;
-    margin: 0 -$desktop-margin 0 -$desktop-margin;
+    margin: 30pt -$desktop-margin 0 -$desktop-margin;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@
     background: pink;
     
     @media only screen and (max-width: $MOBILE){
-        margin: 15pt calc(-1 * #{$mobile-margin}) -15pt calc(-1 * #{$mobile-margin});
+        margin: 30pt calc(-1 * #{$mobile-margin}) -15pt calc(-1 * #{$mobile-margin});
     }
     
     .titleBlock{
@@ -83,6 +83,32 @@
 
             .videoSliderWrapper{
                 width: 100%;
+
+                .videoSlide{
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    .vidCarouselInfo{
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.4);
+                        color: #fff;
+                        padding: 12.5% 10pt;
+                        font-size: 1rem;
+                        letter-spacing: 0.05rem;
+                        line-height: 1.6rem;
+                        top: 100%;
+                        transition: top ease 300ms;
+                    }
+                    &:hover{
+                        .vidCarouselInfo{
+                            top: 0;
+                        }
+                    }
+                }
+
             }
         }
         

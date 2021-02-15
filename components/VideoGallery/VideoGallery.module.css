@@ -1,7 +1,7 @@
 .moduleWrapper {
   position: relative;
   width: 100vw;
-  margin: -50px -50px;
+  margin: -7.5pt -50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@
 
 @media only screen and (max-width: 700px) {
   .moduleWrapper {
-    margin: 15pt calc(-1 * 20px) -15pt calc(-1 * 20px);
+    margin: 30pt calc(-1 * 20px) -15pt calc(-1 * 20px);
   }
 }
 
@@ -114,4 +114,30 @@
 
 .moduleWrapper .videoContainer .video .videoSliderWrapper {
   width: 100%;
+}
+
+.moduleWrapper .videoContainer .video .videoSliderWrapper .videoSlide {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.moduleWrapper .videoContainer .video .videoSliderWrapper .videoSlide .vidCarouselInfo {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 12.5% 10pt;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  top: 100%;
+  -webkit-transition: top ease 300ms;
+  transition: top ease 300ms;
+}
+
+.moduleWrapper .videoContainer .video .videoSliderWrapper .videoSlide:hover .vidCarouselInfo {
+  top: 0;
 }

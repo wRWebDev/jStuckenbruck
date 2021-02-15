@@ -14,9 +14,8 @@ const Content = ({ content }) => {
     return (
         <>
             <div className="normal-page-wrapper">
-                <h1 style={{color: '#fff'}}>{title}</h1>
+                <h1 style={{color: '#fff', lineHeight: '5.5rem', marginBottom: '20pt'}}>{title}</h1>
                 <p style={{color: '#fff'}}>{body}</p>
-                {/* <h2 style={{marginTop: '20pt'}}>Photo Gallery</h2> */}
                 {
                     media 
                         ?   <>

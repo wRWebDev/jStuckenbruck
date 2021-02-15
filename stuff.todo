@@ -2,18 +2,29 @@ Deployment:
 
 
 Main Site:
+    [ ] Layout
+        [ ] Menu - social media svgs (colored)
+    [ ] Homepage 
+        [ ] Crop images
+    [ ] About page
+        [ ] Rethink parallax style (don't use swiper?)
+    [o] Schedule
+        [x] Fetch events
+        [x] Order events
+        [ ] Info Overlay
+        [ ] Background
+    [o] Media
+        [x] B&W images if not active
+        [-] Coverflow for videos
+        [ ] Fullscreen photo gallery
+    [o] Contact
+        [x] Make form work
+        [ ] Validation on API endpoints
+        [ ] Social Media icons
 
-[ ] Home Page
-
-[ ] About Page
-
-[ ] Schedule Page
-    [-] Work out paralax - React-Scroll-Parallax
-        [ ] Read more before coding
-    [ ] Prototype pop-out cards
-
-[ ] Media Page
-    [ ] Dark Video gallery??
-    [ ] Social media links? IG/YT?
-
-[ ] Contact Page
+Editor: 
+    [ ] Page content Editor
+    [ ] Homepage image selector
+    [ ] Gallery Editor
+    [ ] Video Editor
+    [ ] Event Editor

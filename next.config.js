@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-        domains: ['jstuckenbruck2021.s3.eu-west-2.amazonaws.com']
+        domains: ['jstuckenbruck2021.s3.eu-west-2.amazonaws.com', 'img.youtube.com']
     }
 }

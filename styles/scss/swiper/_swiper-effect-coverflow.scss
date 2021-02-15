@@ -1,2 +1,12 @@
 .swiper-container-coverflow {
+
+}
+
+.black-and-white{
+    .swiper-slide{
+        filter: grayscale(1);
+    }
+    .swiper-slide-active{
+        filter: grayscale(0)
+    }
 }

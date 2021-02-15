@@ -1,12 +1,10 @@
-const folder = 'gallery'
-
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Keyboard, Mousewheel, EffectCoverflow, Controller } from 'swiper' 
+import SwiperCore, { Keyboard, Mousewheel, EffectCoverflow, Controller, Autoplay, Navigation } from 'swiper' 
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { RemoveScroll } from 'react-remove-scroll';
 import { useState } from 'react'
-import { nanoid } from 'nanoid'
+import { nanoid, urlAlphabet } from 'nanoid'
 
 
 const CoverFlowCarousel = ({ images }) => {
@@ -20,7 +18,7 @@ const CoverFlowCarousel = ({ images }) => {
         setShowingFullscreenTo(!showingFullscreen)
     }
 
-    SwiperCore.use([Keyboard, Mousewheel, EffectCoverflow, Controller])
+    SwiperCore.use([Keyboard, Mousewheel, EffectCoverflow, Controller, Autoplay, Navigation])
 
     return (
         <>
@@ -34,6 +32,9 @@ const CoverFlowCarousel = ({ images }) => {
                         slideShadows: true,
                         depth: 1000
                     }}
+                    autoplay={{
+                        delay: 2500
+                    }}
                     loop={true}
                     loopedSlides={images.length}
                     keyboard={{
@@ -46,7 +47,7 @@ const CoverFlowCarousel = ({ images }) => {
                     }}
                     onSwiper={setMainSwiperTo}
                     controller={{ control: fullScreenSwiper }}
-                    // onUpdate={mainSwiper}
+                    className="black-and-white"
                 >
                     {
                         images.map(img => (
@@ -83,37 +84,37 @@ const CoverFlowCarousel = ({ images }) => {
                                     loop={true}
                                     loopedSlides={images.length}
                                     grabCursor={true}
-                                    style={{width:'100vw !important', height:'100% !important', marginLeft: '0 !important'}}
+                                    style={{width:'100vw !important', height:'100vh !important', marginLeft: '0 !important'}}
                                     className="fullscreen"
                                     preloadImages={false}
                                     navigation
                                 >
                                     {
-                                        images.map((img, i) => {return (
-                                            <SwiperSlide
+                                        images.map(img => (
+                                            <SwiperSlide 
                                                 key={nanoid()}
+                                                className="dark-background"
                                                 style={{
-                                                    width:'100vw',
+                                                    width: '100vw', 
+                                                    height: '100vh',
+                                                    backgroundImage: `url(${process.env.NEXT_PUBLIC_BUCKET}/media/images/${img.src})`,
+                                                    backgroundPosition: 'center',
+                                                    backgroundSize: 'contain',
+                                                    backgroundRepeat: 'no-repeat'
                                                 }}
-                                            >                                                
-                                                <Image
-                                                    src={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/${img}`}
-                                                    layout="responsive"
-                                                    width={700}
-                                                    height={500}
-                                                    objectFit="cover"
-                                                    objectPosition="center"
-                                                    className="loading-background"
-                                                />      
+                                            >
                                             </SwiperSlide>
-                                        )})
+                                        ))
                                     }
                                 </Swiper>
                             </div>
                             <button 
                                 className={styles.fullScreenCloseButton} 
                                 onClick={toggleFullscreen}
-                            />
+                            >
+                                <div />
+                                <div />
+                            </button>
                         </div>
                     }
                 </RemoveScroll>
