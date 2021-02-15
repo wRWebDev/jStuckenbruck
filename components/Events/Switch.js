@@ -5,10 +5,8 @@ const Switch = ({ fetchEvents }) => {
     const [ viewingFuture, setViewingFutureTo ] = useState(true)
     const switchView = (changeTo) => {
         if(changeTo === 'future' && !viewingFuture){
-            console.log('Setting events to future')
             setViewingFutureTo(true)
         }else if(changeTo === 'past' && viewingFuture){
-            console.log('Setting events to past')
             setViewingFutureTo(false)
         }
     }

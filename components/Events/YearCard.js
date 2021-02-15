@@ -2,10 +2,9 @@ import styles from './styles/events.module.css'
 
 const YearCard = ({ year }) => {
     const array = year.toString().split("")
-    console.log(array)
     return (
         <div className={styles.yearCard}>
-            {array.map(i => <div>{i}</div>)}
+            {array.map((x, i) => <div key={i}>{x}</div>)}
         </div>
     )
 }

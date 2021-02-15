@@ -1,11 +1,12 @@
 import firebase from '../../db/firebase'
 import { Switch, EventList } from '../Events'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Content = ({ content, upcomingEvents }) => {
 
     const { title, body } = content
     const [ eventList, setEventListTo ] = useState(upcomingEvents)
+    const [ viewingFuture, setViewingFutureTo ] = useState(true)
 
     /* Function for fetching events from db */
     const fetchEvents = async future => {
@@ -19,6 +20,8 @@ const Content = ({ content, upcomingEvents }) => {
         }
         // main function
         if(!future){
+            setEventListTo([])
+            setViewingFutureTo(false)
             const pastEvents = await queryBase
                 .orderBy('startDate', 'desc')
                 .where('startDate', '<', now)
@@ -27,9 +30,11 @@ const Content = ({ content, upcomingEvents }) => {
                 .then(snap => handleSnapshot(snap))
             setEventListTo(pastEvents)
         }else{
+            setEventListTo([])
+            setViewingFutureTo(true)
             const futureEvents = await queryBase
-                .orderBy('startDate', 'asc')
-                .where('startDate', '>=', now)
+                .orderBy('endDate', 'asc')
+                .where('endDate', '>=', now)
                 .limit(20)
                 .get()
                 .then(snap => handleSnapshot(snap))
@@ -43,12 +48,12 @@ const Content = ({ content, upcomingEvents }) => {
             <div className="normal-page-wrapper">
                 <h1>{title}</h1>
                 <p>{body}</p>
-                <Switch
-                    fetchEvents={fetchEvents} 
-                />
-                <EventList
-                    events={eventList}
-                />
+                <Switch fetchEvents={fetchEvents} />
+                {
+                    eventList.length
+                        ? <EventList events={eventList} future={viewingFuture} />
+                        : "Loading Johann's schedule..."
+                }
             </div>
         </>
     )
