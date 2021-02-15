@@ -7,7 +7,7 @@ const formatDate = seconds => new Date(seconds * 1000).toLocaleDateString('en-GB
     day: 'numeric',
 })
 
-const EventCard = ({ details }) => {
+const EventCard = ({ details, openOverlay }) => {
 
     const composers = details.repertoire.reduce((acc, curr) => [...acc, curr.composer], [])
 
@@ -24,7 +24,11 @@ const EventCard = ({ details }) => {
                 <div className={styles.cardBack}>
                     <h4>{formatDate(details.performanceDate)}</h4>
                     <h3>{composers.join(' / ')}</h3>
-                    <button>Read more</button>
+                    <button 
+                        onClick={() => openOverlay(details)}
+                    >
+                        Read more
+                    </button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import firebase from '../../db/firebase'
-import { Switch, EventList } from '../Events'
+import { Switch, EventList, Overlay } from '../Events'
 import { useState } from 'react'
 
 const Content = ({ content, upcomingEvents }) => {
@@ -7,6 +7,7 @@ const Content = ({ content, upcomingEvents }) => {
     const { title, body } = content
     const [ eventList, setEventListTo ] = useState(upcomingEvents)
     const [ viewingFuture, setViewingFutureTo ] = useState(true)
+    const [ currentEvent, setCurrentEventTo ] = useState({})
 
     /* Function for fetching events from db */
     const fetchEvents = async future => {
@@ -42,6 +43,11 @@ const Content = ({ content, upcomingEvents }) => {
         }
     }
 
+    const openOverlay = details => {
+        document.getElementById('eventOverlay').style.top = 0
+        setCurrentEventTo(details)
+    }
+
     /* Component */
     return (
         <>
@@ -51,10 +57,17 @@ const Content = ({ content, upcomingEvents }) => {
                 <Switch fetchEvents={fetchEvents} />
                 {
                     eventList.length
-                        ? <EventList events={eventList} future={viewingFuture} />
+                        ? <EventList 
+                            events={eventList} 
+                            future={viewingFuture}
+                            openOverlay={openOverlay}
+                        />
                         : "Loading Johann's schedule..."
                 }
             </div>
+            <Overlay 
+                details={currentEvent}
+            />
         </>
     )
 }

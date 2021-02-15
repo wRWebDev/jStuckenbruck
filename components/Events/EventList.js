@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 import styles from './styles/events.module.css'
 import { separatePerformances } from './separation'
 
-const EventList = ({ events, future }) => {
+const EventList = ({ events, future, openOverlay }) => {
 
     const fullEventList = separatePerformances(events, future)
 
@@ -15,7 +15,8 @@ const EventList = ({ events, future }) => {
                     card.type === 'event'
                         ? <EventCard 
                             key={nanoid()}
-                            details={card} 
+                            details={card}
+                            openOverlay={openOverlay}
                         />
                         : <YearCard 
                             key={nanoid()}

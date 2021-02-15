@@ -1,0 +1,56 @@
+@import '../../../../styles/scss/variables';
+
+.overlayWrapper{
+    position: fixed;
+    top: 150%;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    transition: top ease 500ms;
+}
+
+.overlayCloseButton{
+    position: absolute;
+    top: 30px;
+    right: $desktop-margin;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2; 
+    div{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 32px;
+        height: 3px;
+        background: #000;
+        transform-origin: center;
+        &:nth-child(1){transform: rotateZ(45deg)}   
+        &:nth-child(2){transform: rotateZ(-45deg)}
+    }
+}
+
+.overlayInfo{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding: $desktop-header-height $desktop-margin;
+    background: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        &.overlayDate{
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+        }
+        &.overlayLocation{
+
+        }
+    }
+}

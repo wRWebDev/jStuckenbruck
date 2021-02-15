@@ -138,3 +138,73 @@
   left: 50%;
   color: #a92626;
 }
+
+.overlayWrapper {
+  position: fixed;
+  top: 150%;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  -webkit-transition: top ease 500ms;
+  transition: top ease 500ms;
+}
+
+.overlayCloseButton {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.overlayCloseButton div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  background: #000;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.overlayCloseButton div:nth-child(1) {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.overlayCloseButton div:nth-child(2) {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.overlayInfo {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 95px 50px;
+  background: #fff;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlayInfo span.overlayDate {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
