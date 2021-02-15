@@ -6,14 +6,12 @@ const Switch = ({ fetchEvents }) => {
     const switchView = (changeTo) => {
         if(changeTo === 'future' && !viewingFuture){
             setViewingFutureTo(true)
+            fetchEvents(true)
         }else if(changeTo === 'past' && viewingFuture){
             setViewingFutureTo(false)
+            fetchEvents(false)
         }
     }
-
-    useEffect(()=>{
-        fetchEvents(viewingFuture)
-    }, [viewingFuture])
 
     const switchStyles = {
         display: 'inline-block', 

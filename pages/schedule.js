@@ -35,8 +35,8 @@ export async function getServerSideProps(){
   const upcomingEvents = await firebase 
     .firestore()
     .collection('schedule')
-    .orderBy('startDate', 'asc')
-    .where('startDate', '>=', now)
+    .orderBy('endDate', 'asc')
+    .where('endDate', '>=', now)
     .limit(20)
     .get()
     .then(snapshot => {
