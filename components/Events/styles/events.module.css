@@ -149,6 +149,8 @@
   z-index: 9999;
   -webkit-transition: top ease 500ms;
   transition: top ease 500ms;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .overlayCloseButton {

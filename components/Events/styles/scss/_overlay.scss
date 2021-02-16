@@ -9,6 +9,8 @@
     background: #fff;
     z-index: 9999;
     transition: top ease 500ms;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .overlayCloseButton{

@@ -134,6 +134,11 @@
             .downloadText{
                 padding: $mobile-margin 0;
                 width: 100%;
+                align-items: center;
+                h2, p {
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
         

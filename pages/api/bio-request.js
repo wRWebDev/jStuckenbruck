@@ -29,7 +29,7 @@ export default async function(req, res){
         if(!validate(1, "", email)){
             throw new Error('Passed parameters are not valid')
         }
-        // await sgMail.send(emailData)
+        await sgMail.send(emailData)
         res.status(200).send('Message sent successfully')
     }catch (err){
         console.error(err.message)
