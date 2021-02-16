@@ -10,8 +10,8 @@ export default function TitleCard({ title = String, image = String }){
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', parallaxScroll)
-        return (()=>{window.removeEventListener('scroll', parallaxScroll)})
+        document.addEventListener('scroll', parallaxScroll)
+        return () => document.removeEventListener('scroll', parallaxScroll)
     }, [])
 
     return (

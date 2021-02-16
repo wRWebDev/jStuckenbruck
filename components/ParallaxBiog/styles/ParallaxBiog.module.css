@@ -183,6 +183,9 @@
     width: 100%;
     text-align: center;
   }
+  .biogSection.downloadSection .downloadText h2 {
+    line-height: 2rem;
+  }
 }
 
 .biogSection.downloadSection .requestButton {
