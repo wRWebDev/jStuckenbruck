@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Menu from './Menu'
 import { useState, useEffect } from 'react'
@@ -35,6 +34,7 @@ const Header = ({ darkMode }) => {
     return (
         <>
             <header 
+                id="site-header"
                 className={ 
                     darkMode 
                         ? 'light-text' 

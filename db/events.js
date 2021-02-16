@@ -1,3 +1,5 @@
+/* A copy of the events from the old site for uploading during testing */
+
 const eventsToUpload = [
   {
     published: true,

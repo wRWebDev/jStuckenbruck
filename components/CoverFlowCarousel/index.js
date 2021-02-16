@@ -32,9 +32,9 @@ const CoverFlowCarousel = ({ images }) => {
                         slideShadows: true,
                         depth: 1000
                     }}
-                    autoplay={{
-                        delay: 2500
-                    }}
+                    // autoplay={{
+                    //     delay: 2500
+                    // }}
                     loop={true}
                     loopedSlides={images.length}
                     keyboard={{
