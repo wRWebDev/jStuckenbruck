@@ -11,12 +11,13 @@ const EventList = ({ events, future, openOverlay }) => {
     return (
         <div className={styles.listWrapper}>
             {
-                fullEventList.map(card =>
+                fullEventList.map((card, i) =>
                     card.type === 'event'
                         ? <EventCard 
                             key={nanoid()}
                             details={card}
                             openOverlay={openOverlay}
+                            index={i}
                         />
                         : <YearCard 
                             key={nanoid()}

@@ -1,29 +1,8 @@
 import OutsideClickHandler from 'react-outside-click-handler'
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { pages, socialMediaLinks } from '../lib'
 
-const pages = [
-    {
-        display: 'home',
-        link: '/'
-    },
-    {
-        display: 'biography',
-        link: '/biography'
-    },
-    {
-        display: 'schedule',
-        link: '/schedule'
-    },
-    {
-        display: 'media',
-        link: '/media'
-    },
-    {
-        display: 'contact',
-        link: '/contact'
-    },
-]
 
 const Menu = ({ showing, darkMode, toggleMenu }) => {
 
@@ -32,6 +11,12 @@ const Menu = ({ showing, darkMode, toggleMenu }) => {
             ? document.getElementById('menu').classList.add('showing')
             : document.getElementById('menu').classList.remove('showing')
     }, [showing])
+
+    useEffect(()=>{
+        socialMediaLinks.forEach((sm)=>{
+            document.getElementById(`sm-${sm.name}`).innerHTML = sm.icon
+        })
+    }, [])
 
     const links = pages
         .map((page, i) =>
@@ -59,6 +44,22 @@ const Menu = ({ showing, darkMode, toggleMenu }) => {
                 <ul>
                     {links}
                 </ul>
+                <div id="menu-socialMedia">
+                    <ul>
+                        {
+                            socialMediaLinks.map((sm, i) => (
+                                <a 
+                                    key={i} 
+                                    href={sm.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <li id={`sm-${sm.name}`} />
+                                </a>
+                            ))
+                        }
+                    </ul>
+                </div>
             </nav>
         </OutsideClickHandler>
     )

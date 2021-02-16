@@ -1,6 +1,5 @@
-import next from 'next'
-
 const sgMail = require('@sendgrid/mail')
+import { validate } from './validation'
 
 export default async function(req, res){
     
@@ -31,6 +30,9 @@ export default async function(req, res){
 
 
     try {
+        if(!validate(3, name, email, message)){
+            throw new Error('Passed parameters are not valid')
+        }
         await sgMail.send(emailData)
         res.status(200).send('Message sent successfully')
     }catch (err){

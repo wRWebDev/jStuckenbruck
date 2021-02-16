@@ -1,26 +1,27 @@
 Deployment: 
-
+    [-] Transfer API Keys to server 
 
 Main Site:
-    [ ] Layout
-        [ ] Menu - social media svgs (colored)
+    [-] Layout
+        [-] Menu - social media svgs (colored)
     [ ] Homepage 
         [ ] Crop images
     [ ] About page
         [ ] Rethink parallax style (don't use swiper?)
     [o] Schedule
-        [x] Fetch events
-        [x] Order events
-        [ ] Info Overlay
+        [-] Fetch events
+        [-] Order events
+        [-] Info Overlay
         [ ] Background
-    [o] Media
-        [x] B&W images if not active
+    [-] Media
+        [-] B&W images if not active
         [-] Coverflow for videos
-        [ ] Fullscreen photo gallery
+        [-] Fullscreen photo gallery
+        [-] Video titles on carousel hover
     [o] Contact
-        [x] Make form work
-        [ ] Validation on API endpoints
-        [ ] Social Media icons
+        [-] Make form work
+        [-] Validation on API endpoints
+        [-] Social Media icons
 
 Editor: 
     [ ] Page content Editor

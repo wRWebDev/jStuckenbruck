@@ -1,6 +1,7 @@
 import firebase from '../../../db/firebase'
 const sgMail = require('@sendgrid/mail')
 import { separatePerformances } from '../../../components/Events/separation'
+import { validate } from './validation'
 
 export default async function(req, res){
     
@@ -60,6 +61,9 @@ export default async function(req, res){
 
 
     try {
+        if(!validate(2, name, email)){
+            throw new Error('Passed parameters are not valid')
+        }
         await sgMail.send(emailData)
         res.status(200).send('Message successfully sent.')
 

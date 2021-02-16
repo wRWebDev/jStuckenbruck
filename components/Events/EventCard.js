@@ -7,16 +7,17 @@ const formatDate = seconds => new Date(seconds * 1000).toLocaleDateString('en-GB
     day: 'numeric',
 })
 
-const EventCard = ({ details, openOverlay }) => {
+const EventCard = ({ details, openOverlay, index }) => {
 
     const composers = details.repertoire.reduce((acc, curr) => [...acc, curr.composer], [])
 
     return (
-        <div
-            className={styles.eventCard}
-        >
+        <div className={styles.eventCard}>
             <div className={styles.eventCardInner}>
-                <div className={styles.cardFront}>
+                <div 
+                    className={styles.cardFront}
+                    style={ index % 3 === 1 ? {background: '#a92626', color: '#fff'} : {} }
+                >
                     <h4>{formatDate(details.performanceDate)}</h4>
                     <h3>{details.institution}</h3>
                     <h4>{details.status}</h4>

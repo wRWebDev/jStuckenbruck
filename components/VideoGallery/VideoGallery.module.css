@@ -107,6 +107,13 @@
   margin: 0 5%;
 }
 
+@media only screen and (max-width: 700px) {
+  .moduleWrapper .videoContainer .video {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .moduleWrapper .videoContainer .video iframe {
   width: 100%;
   height: 50vw;
@@ -136,6 +143,14 @@
   top: 100%;
   -webkit-transition: top ease 300ms;
   transition: top ease 300ms;
+}
+
+@media only screen and (max-width: 700px) {
+  .moduleWrapper .videoContainer .video .videoSliderWrapper .videoSlide .vidCarouselInfo {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    line-height: 1rem;
+  }
 }
 
 .moduleWrapper .videoContainer .video .videoSliderWrapper .videoSlide:hover .vidCarouselInfo {

@@ -114,8 +114,8 @@ button{
 
 @keyframes struggle-right {
     0% {transform: translateX(0)}
-    35% {transform: translateX(7px)}
-    43% {transform: translateX(4px)}
+    27% {transform: translateX(7px)}
+    38% {transform: translateX(4px)}
     50% {transform: translateX(6px)}
     57% {transform: translateX(4px)}
     64% {transform: translateX(7px)}
@@ -123,8 +123,8 @@ button{
 }
 @keyframes struggle-down {
     0% {transform: translateY(0) rotate(90deg)}
-    35% {transform: translateY(7px) rotate(90deg)}
-    43% {transform: translateY(4px) rotate(90deg)}
+    27% {transform: translateY(7px) rotate(90deg)}
+    38% {transform: translateY(4px) rotate(90deg)}
     50% {transform: translateY(6px) rotate(90deg)}
     57% {transform: translateY(4px) rotate(90deg)}
     64% {transform: translateY(7px) rotate(90deg)}

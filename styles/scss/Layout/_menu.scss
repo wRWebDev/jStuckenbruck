@@ -103,3 +103,43 @@
 		}
 	}
 }
+
+#menu-socialMedia{
+	width: 100%;
+	margin-top: 10pt;
+	ul {
+		list-style: none;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: flex-end;
+		li {
+			// Resize svgs to 36x36px
+			.menu-socmed-icon {
+				width: 36px;
+				height: 36px;
+				margin-left: 10px;
+				cursor: pointer;
+				// On hover edit fill color
+				&:hover {
+					.facebook {
+						fill: #2a6fc9;
+					}
+					.instagram {
+						fill: #ca2d8c;
+					}
+					.instagram_lens {
+						fill: #8d1ea3;
+					}
+					.twitter {
+						fill: #2c88ff;
+					}
+					.youtube {
+						fill: #c61a1a;
+					}
+				}
+			}
+		}
+	}
+}

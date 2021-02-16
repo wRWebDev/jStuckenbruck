@@ -76,6 +76,11 @@
             background: $dark;
             margin: 0 5%;
 
+            @media only screen and (max-width: $MOBILE){
+                width: 100%;
+                margin: 0;
+            }
+
             iframe{
                 width: 100%;
                 height: 50vw;
@@ -101,6 +106,11 @@
                         line-height: 1.6rem;
                         top: 100%;
                         transition: top ease 300ms;
+                        @media only screen and (max-width: $MOBILE){
+                            font-size: 0.7rem;
+                            letter-spacing: 0;
+                            line-height: 1rem;
+                        }
                     }
                     &:hover{
                         .vidCarouselInfo{

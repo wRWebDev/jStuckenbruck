@@ -166,11 +166,11 @@ button {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  35% {
+  27% {
     -webkit-transform: translateX(7px);
             transform: translateX(7px);
   }
-  43% {
+  38% {
     -webkit-transform: translateX(4px);
             transform: translateX(4px);
   }
@@ -197,11 +197,11 @@ button {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  35% {
+  27% {
     -webkit-transform: translateX(7px);
             transform: translateX(7px);
   }
-  43% {
+  38% {
     -webkit-transform: translateX(4px);
             transform: translateX(4px);
   }
@@ -228,11 +228,11 @@ button {
     -webkit-transform: translateY(0) rotate(90deg);
             transform: translateY(0) rotate(90deg);
   }
-  35% {
+  27% {
     -webkit-transform: translateY(7px) rotate(90deg);
             transform: translateY(7px) rotate(90deg);
   }
-  43% {
+  38% {
     -webkit-transform: translateY(4px) rotate(90deg);
             transform: translateY(4px) rotate(90deg);
   }
@@ -259,11 +259,11 @@ button {
     -webkit-transform: translateY(0) rotate(90deg);
             transform: translateY(0) rotate(90deg);
   }
-  35% {
+  27% {
     -webkit-transform: translateY(7px) rotate(90deg);
             transform: translateY(7px) rotate(90deg);
   }
-  43% {
+  38% {
     -webkit-transform: translateY(4px) rotate(90deg);
             transform: translateY(4px) rotate(90deg);
   }
@@ -723,6 +723,56 @@ footer p {
 }
 
 #social-media-menu ul li .menu-socmed-icon:hover .youtube {
+  fill: #c61a1a;
+}
+
+#menu-socialMedia {
+  width: 100%;
+  margin-top: 10pt;
+}
+
+#menu-socialMedia ul {
+  list-style: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon {
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon:hover .facebook {
+  fill: #2a6fc9;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon:hover .instagram {
+  fill: #ca2d8c;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon:hover .instagram_lens {
+  fill: #8d1ea3;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon:hover .twitter {
+  fill: #2c88ff;
+}
+
+#menu-socialMedia ul li .menu-socmed-icon:hover .youtube {
   fill: #c61a1a;
 }
 
