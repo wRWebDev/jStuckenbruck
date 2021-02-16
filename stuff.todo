@@ -1,28 +1,14 @@
 Deployment: 
     [-] Transfer API Keys to server 
 
-Main Site:
-    [-] Layout
-        [-] Menu - social media svgs (colored)
-    [ ] Homepage 
-        [ ] Crop images
-    [-] About page
-        [-] Rethink parallax style (don't use swiper?)
-        [-] Download of biog
-    [!] Schedule
-        [-] Fetch events
-        [-] Order events
-        [-] Info Overlay
-        [ ] Background
-    [-] Media
-        [-] B&W images if not active
-        [-] Coverflow for videos
-        [-] Fullscreen photo gallery
-        [-] Video titles on carousel hover
-    [-] Contact
-        [-] Make form work
-        [-] Validation on API endpoints
-        [-] Social Media icons
+Johann's Comments:
+    [ ] Schedule
+        [ ] Add current year card
+        [ ] Make background for body, not main
+        [ ] New year, new row
+        [ ] Add old db events
+    [ ] Biog extend main behind menu
+
 
 Editor: 
     [ ] Page content Editor

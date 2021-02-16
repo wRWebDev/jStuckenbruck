@@ -2,7 +2,7 @@ import styles from './styles/ParallaxBiog.module.css'
 import { useEffect } from 'react'
 
 export default function TitleCard({ title = String, image = String }){
-
+    
     const parallaxScroll = () => {
         const el = document.getElementById('biogTitleCard')
         let offset = window.pageYOffset
@@ -10,6 +10,9 @@ export default function TitleCard({ title = String, image = String }){
     }
 
     useEffect(() => {
+        /* Extend the cover photo behind the menu */
+        document.querySelector('main').style.marginTop = 0
+        /* Add scroll listener to make parallax effect */
         document.addEventListener('scroll', parallaxScroll)
         return () => document.removeEventListener('scroll', parallaxScroll)
     }, [])

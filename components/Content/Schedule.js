@@ -12,10 +12,10 @@ const Content = ({ content, upcomingEvents }) => {
 
     /* Set the background image to BSH */
     useEffect(() => {
-        document
-            .querySelector('main')
-            .style
-            .backgroundImage = `url(${process.env.NEXT_PUBLIC_BUCKET}/media/images/${image})`
+        const main = document.querySelector('main')
+        main.style.marginTop = 0
+        main.style.paddingTop = '95px'
+        main.style.backgroundImage = `url(${process.env.NEXT_PUBLIC_BUCKET}/media/images/${image})`
     }, [])
 
     /* Function for fetching events from db */

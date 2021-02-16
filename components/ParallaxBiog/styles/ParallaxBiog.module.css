@@ -33,6 +33,7 @@
   -webkit-perspective: 200px;
           perspective: 200px;
   font-family: 'Didact Gothic', sans-serif;
+  padding-top: calc(95px + 50pt);
 }
 
 .biogSection.biogSection {
