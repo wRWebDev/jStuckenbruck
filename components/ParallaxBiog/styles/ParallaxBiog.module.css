@@ -36,12 +36,26 @@
 }
 
 .biogSection.biogSection {
-  white-space: pre-line;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   letter-spacing: 0.0095rem;
   line-height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.biogSection.biogSection span {
+  white-space: pre-line;
+  display: block;
+  max-width: 700px;
 }
 
 .biogSection.quoteSection {
@@ -52,20 +66,13 @@
   background-size: cover;
   min-height: 70vh;
   background-attachment: fixed;
-  padding: 0 50px;
-}
-
-@media only screen and (max-width: 700px) {
-  .biogSection.quoteSection {
-    padding: 0 20px;
-  }
 }
 
 .biogSection.quoteSection .quoteInner {
   position: relative;
   top: 0;
-  left: -50px;
-  width: calc(100% + 2 * 50px);
+  left: 0;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -84,14 +91,6 @@
           justify-content: center;
   padding: 100pt 50px;
   text-align: center;
-}
-
-@media only screen and (max-width: 700px) {
-  .biogSection.quoteSection .quoteInner {
-    left: -20px;
-    width: calc(100% + 2 * 20px);
-    padding: 100pt 20px;
-  }
 }
 
 .biogSection.quoteSection .quoteInner h2 {

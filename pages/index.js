@@ -1,6 +1,7 @@
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Homepage'
+import { update } from '../db/updateBio'
 
 const pageDetails = {
   name: 'home',
@@ -12,6 +13,8 @@ const pageDetails = {
 }
 
 const Page = ({ content }) => {
+
+  update()
 
   return (
     <>
