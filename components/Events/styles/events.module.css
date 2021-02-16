@@ -1,3 +1,19 @@
+.pageWrapper {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  width: 80%;
+  padding-bottom: 80pt;
+  min-height: 100vh;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (max-width: 700px) {
+  .pageWrapper {
+    width: 100%;
+  }
+}
+
 .listWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,6 +31,17 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -5pt;
+}
+
+@media only screen and (max-width: 700px) {
+  .listWrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .eventCard {
@@ -62,6 +89,7 @@
           justify-content: center;
   padding: 15px;
   border: 2px solid #a92626;
+  background: #fff;
 }
 
 .eventCard .eventCardInner .cardFront h3, .eventCard .eventCardInner .cardFront h4, .eventCard .eventCardInner .cardFront button, .eventCard .eventCardInner .cardBack h3, .eventCard .eventCardInner .cardBack h4, .eventCard .eventCardInner .cardBack button {

@@ -6,9 +6,9 @@ Main Site:
         [-] Menu - social media svgs (colored)
     [ ] Homepage 
         [ ] Crop images
-    [o] About page
+    [-] About page
         [-] Rethink parallax style (don't use swiper?)
-        [ ] Download of biog
+        [-] Download of biog
     [!] Schedule
         [-] Fetch events
         [-] Order events
@@ -19,7 +19,7 @@ Main Site:
         [-] Coverflow for videos
         [-] Fullscreen photo gallery
         [-] Video titles on carousel hover
-    [o] Contact
+    [-] Contact
         [-] Make form work
         [-] Validation on API endpoints
         [-] Social Media icons

@@ -20,6 +20,10 @@ body{
 main{
     min-height: 75vh;
     margin-top: $desktop-header-height;
+    background-attachment: fixed;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1, h2, h3, h4{

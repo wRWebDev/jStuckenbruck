@@ -9,7 +9,7 @@ const Content = ({ content }) => {
     const mediaQuery = firebase.firestore().collection('media').limit(2)
     const [ media ] = useCollectionDataOnce(mediaQuery, { idField: 'id' })
 
-    const { title, body } = content
+    const { title, body, image } = content
 
     return (
         <>

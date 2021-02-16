@@ -1,5 +1,8 @@
 $themeColor: #a92626;
 
+@import '../../../../styles/scss/variables';
+@import 'pageWrapper';
+
 .listWrapper{
     display: flex;
     flex-direction: row;
@@ -7,6 +10,11 @@ $themeColor: #a92626;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 -5pt;
+
+    @media only screen and (max-width: $MOBILE){
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .eventCard{
@@ -37,6 +45,7 @@ $themeColor: #a92626;
             justify-content: center;
             padding: 15px;
             border: 2px solid $themeColor;
+            background: #fff;
             h3, h4, button{
                 margin: 3pt 0;
             }

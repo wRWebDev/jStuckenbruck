@@ -1,13 +1,22 @@
 import firebase from '../../db/firebase'
 import { Switch, EventList, Overlay } from '../Events'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import styles from '../Events/styles/events.module.css'
 
 const Content = ({ content, upcomingEvents }) => {
 
-    const { title, body } = content
+    const { title, body, image } = content
     const [ eventList, setEventListTo ] = useState(upcomingEvents)
     const [ viewingFuture, setViewingFutureTo ] = useState(true)
     const [ currentEvent, setCurrentEventTo ] = useState({})
+
+    /* Set the background image to BSH */
+    useEffect(() => {
+        document
+            .querySelector('main')
+            .style
+            .backgroundImage = `url(${process.env.NEXT_PUBLIC_BUCKET}/media/images/${image})`
+    }, [])
 
     /* Function for fetching events from db */
     const fetchEvents = async future => {
@@ -51,7 +60,9 @@ const Content = ({ content, upcomingEvents }) => {
     /* Component */
     return (
         <>
-            <div className="normal-page-wrapper">
+            <div 
+                className={`normal-page-wrapper ${styles.pageWrapper}`}
+            >
                 <h1>{title}</h1>
                 <p>{body}</p>
                 <Switch fetchEvents={fetchEvents} />
