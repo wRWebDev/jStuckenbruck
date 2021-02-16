@@ -1,0 +1,11 @@
+.pageWrapper{
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(1rem);
+    width: 80%;
+    padding-bottom: 80pt;
+    min-height: 100vh;
+    @media only screen and (max-width: $MOBILE){
+        width: 100%;
+    }
+    border-right: 2px solid rgba(255,255,255,0.7);
+}
