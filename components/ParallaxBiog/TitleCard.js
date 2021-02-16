@@ -3,12 +3,15 @@ import { useEffect } from 'react'
 
 export default function TitleCard({ title = String, image = String }){
 
+    const parallaxScroll = () => {
+        const el = document.getElementById('biogTitleCard')
+        let offset = window.pageYOffset
+        el.style.backgroundPositionY = `${-offset * 0.3}px`
+    }
+
     useEffect(() => {
-        window.addEventListener('scroll', ()=>{
-            const el = document.getElementById('biogTitleCard')
-            let offset = window.pageYOffset
-            el.style.backgroundPositionY = `${-offset * 0.3}px`
-        })
+        window.addEventListener('scroll', parallaxScroll)
+        return (()=>{window.removeEventListener('scroll', parallaxScroll)})
     }, [])
 
     return (

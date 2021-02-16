@@ -10,7 +10,7 @@
     
     &.titleSection{
         background: #252525;
-        background-position: center bottom;
+        background-position: center 0;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -106,5 +106,71 @@
 
     &.downloadSection{
         background: #3c4d33;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 15pt;
+        }
+        .downloadText{
+            height: 100%;
+            padding: 15pt;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 650px;
+        }
+
+        @media only screen and (max-width: $MOBILE){
+            img{
+                margin: $mobile-margin; 
+            }
+            .downloadText{
+                padding: $mobile-margin 0;
+                width: 100%;
+            }
+        }
+        
+        .requestButton{
+            margin-top: 10pt;
+            border: 2px solid #fff;
+            padding: 5pt 10pt;
+            transition: all ease 400ms;
+            height: 32pt;
+
+            input{
+                background: transparent;
+                color: #fff;
+                border: none;
+                width: 200px;
+                padding: 5pt;
+                height: 100%;
+                &::placeholder{
+                    color: #fff;
+                }
+            }
+
+            button{
+                background: #fff;
+                color: #3c4d33;
+                font-weight: 600;
+                height: 30pt;
+                border: none;
+                padding: 0 5pt;
+                margin: -5pt -10pt -5pt 5pt;
+            }
+        }
+
+        h5{
+            margin-top: 5pt;
+            font-weight: 300;
+            font-style: italic;
+        }
     }
 }

@@ -13,7 +13,7 @@
 
 .biogSection.titleSection {
   background: #252525;
-  background-position: center bottom;
+  background-position: center 0;
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -120,4 +120,102 @@
 
 .biogSection.downloadSection {
   background: #3c4d33;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.biogSection.downloadSection img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 15pt;
+}
+
+.biogSection.downloadSection .downloadText {
+  height: 100%;
+  padding: 15pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 650px;
+}
+
+@media only screen and (max-width: 700px) {
+  .biogSection.downloadSection img {
+    margin: 20px;
+  }
+  .biogSection.downloadSection .downloadText {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+.biogSection.downloadSection .requestButton {
+  margin-top: 10pt;
+  border: 2px solid #fff;
+  padding: 5pt 10pt;
+  -webkit-transition: all ease 400ms;
+  transition: all ease 400ms;
+  height: 32pt;
+}
+
+.biogSection.downloadSection .requestButton input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  width: 200px;
+  padding: 5pt;
+  height: 100%;
+}
+
+.biogSection.downloadSection .requestButton input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.biogSection.downloadSection .requestButton input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.biogSection.downloadSection .requestButton input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.biogSection.downloadSection .requestButton input::placeholder {
+  color: #fff;
+}
+
+.biogSection.downloadSection .requestButton button {
+  background: #fff;
+  color: #3c4d33;
+  font-weight: 600;
+  height: 30pt;
+  border: none;
+  padding: 0 5pt;
+  margin: -5pt -10pt -5pt 5pt;
+}
+
+.biogSection.downloadSection h5 {
+  margin-top: 5pt;
+  font-weight: 300;
+  font-style: italic;
 }

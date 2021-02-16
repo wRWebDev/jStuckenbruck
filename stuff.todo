@@ -7,7 +7,8 @@ Main Site:
     [ ] Homepage 
         [ ] Crop images
     [o] About page
-        [o] Rethink parallax style (don't use swiper?)
+        [-] Rethink parallax style (don't use swiper?)
+        [ ] Download of biog
     [!] Schedule
         [-] Fetch events
         [-] Order events

@@ -1,7 +1,7 @@
 import firebase from '../../../db/firebase'
 const sgMail = require('@sendgrid/mail')
 import { separatePerformances } from '../../../components/Events/separation'
-import { validate } from './validation'
+import { validate } from '../validation'
 
 export default async function(req, res){
     
