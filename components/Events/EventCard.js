@@ -16,7 +16,7 @@ const EventCard = ({ details, openOverlay, index }) => {
             <div className={styles.eventCardInner}>
                 <div 
                     className={styles.cardFront}
-                    style={ index % 3 === 1 ? {background: '#a92626', color: '#fff'} : {} }
+                    style={ (index % 7 === 2 || index % 9 === 5) ? {background: '#a92626', color: '#fff'} : {} }
                 >
                     <h4>{formatDate(details.performanceDate)}</h4>
                     <h3>{details.institution}</h3>

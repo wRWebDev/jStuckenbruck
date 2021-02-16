@@ -2,13 +2,13 @@ Deployment:
     [-] Transfer API Keys to server 
 
 Johann's Comments:
-    [ ] Schedule
-        [ ] Add current year card
-        [ ] Make background for body, not main
-        [ ] New year, new row
-        [ ] Add old db events
-    [ ] Biog extend main behind menu
-
+    [-] Schedule
+        [-] Add current year card
+        [-] Make background go behind menu
+        [-] New year, new row
+        [-] Add old db events
+    [-] Biog extend main behind menu
+    [ ] Biog - bolder text for institutions
 
 Editor: 
     [ ] Page content Editor
