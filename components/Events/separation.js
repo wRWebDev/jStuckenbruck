@@ -25,7 +25,7 @@ const separatePerformances = (list, future) => {
     })
     // return in order of each individual performance
     const now = parseInt(new Date().getTime() / 1000)
-    return newList
+    const newerList =  newList
         .filter(a => {
             return future 
                 ? a.performanceDate >= now
@@ -34,6 +34,15 @@ const separatePerformances = (list, future) => {
         .sort((a,b)=>{
             return a.performanceDate - b.performanceDate
         })
+
+    if(newerList[0].type !== 'year'){
+        newerList.unshift({
+            type: 'year',
+            year: new Date(newerList[0].performanceDate * 1000).getFullYear()
+        })
+    }
+    
+    return newerList
 }
 
 export { separatePerformances }
