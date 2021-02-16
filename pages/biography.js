@@ -23,14 +23,12 @@ const Page = ({ content }) => {
 
 export async function getServerSideProps(ctx){
   
-  const snapshot = await firebase
+  const pageData = await firebase
     .firestore()
-    .collection('pages/about/biog_sections')
-    .orderBy('position', 'asc')
+    .collection('pages')
+    .doc(pageDetails.name)
     .get()
-  const list = snapshot.docs.map(doc => doc.data())
-
-  return { props: { content: list } }
+  return { props: { content: pageData.data() } }
 }
 
 export default Page

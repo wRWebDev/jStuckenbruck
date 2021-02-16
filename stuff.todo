@@ -6,9 +6,9 @@ Main Site:
         [-] Menu - social media svgs (colored)
     [ ] Homepage 
         [ ] Crop images
-    [ ] About page
-        [ ] Rethink parallax style (don't use swiper?)
-    [o] Schedule
+    [o] About page
+        [o] Rethink parallax style (don't use swiper?)
+    [!] Schedule
         [-] Fetch events
         [-] Order events
         [-] Info Overlay
