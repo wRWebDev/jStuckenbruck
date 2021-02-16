@@ -16,6 +16,10 @@ const Menu = ({ showing, darkMode, toggleMenu }) => {
         socialMediaLinks.forEach((sm)=>{
             document.getElementById(`sm-${sm.name}`).innerHTML = sm.icon
         })
+        if(darkMode){
+            document.querySelectorAll('path').forEach(i => i.style.fill = '#fff')
+            document.querySelectorAll('circle').forEach(i => i.style.fill = '#fff')
+        }
     }, [])
 
     const links = pages
@@ -54,7 +58,9 @@ const Menu = ({ showing, darkMode, toggleMenu }) => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <li id={`sm-${sm.name}`} />
+                                    <li 
+                                        id={`sm-${sm.name}`} 
+                                    />
                                 </a>
                             ))
                         }
