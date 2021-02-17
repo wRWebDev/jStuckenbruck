@@ -1,7 +1,7 @@
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Homepage'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 
 const pageDetails = {
   name: 'home',
@@ -14,10 +14,10 @@ const pageDetails = {
 
 const Page = ({ content }) => {
 
-  useEffect(()=>{
-    document.getElementById('site-header').style.background = 'transparent !important'
-    document.getElementById('site-header').style.backdropFilter = 'none'
-  }, [])
+  // useEffect(()=>{
+  //   document.getElementById('site-header').style.background = 'transparent !important'
+  //   document.getElementById('site-header').style.backdropFilter = 'none'
+  // }, [])
 
   return (
     <>
