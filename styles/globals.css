@@ -787,6 +787,12 @@ footer p {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 700px) {
+  #menu-socialMedia ul li .menu-socmed-icon {
+    margin: 0 5px;
+  }
+}
+
 /* 
   Mostly provided by Swiper JS.
    - see https://swiperjs.com for more info.
