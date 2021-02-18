@@ -1,3 +1,8 @@
+/* 
+    Config connection to Firebase 
+    More info at https://firebase.google.com    
+*/
+
 import firebase from 'firebase'
 
 const config = {

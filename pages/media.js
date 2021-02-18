@@ -1,3 +1,12 @@
+/*
+  MEDIA (/media)
+    - Load page content server-side
+     (title, body content)
+    - Media loaded client-side
+     (photos, videos) - components/Content/Media
+    - Enable dark-mode
+*/
+
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Media'

@@ -1,7 +1,15 @@
+/*
+    Event Details Overlay
+        - Full screen overlay 
+        - Slides in from bottom of the screen
+        - Displays all known event details
+*/
+
 import styles from './styles/events.module.css'
 
 const Overlay = ({ details = Object }) => {
 
+    // If no rep exists, create an empty array for it.
     if(!Object.keys(details).includes('repertoire')){
         details.repertoire = []
     }

@@ -1,5 +1,17 @@
+/*
+    Event Card
+        - This is the square that flips over
+        - Contains minimal info about the event
+        - Contains a CTA to open the overlay with more info
+        - 32: Make seemingly random tiles the theme colour
+            - TODO: 
+                [ ] Derive theme colour from average colour of the background image
+                [ ] Make the coloured in tiles actually random
+*/
+
 import styles from './styles/events.module.css'
 
+/* Formats date to e.g. 20 Feb */
 const formatDate = seconds => new Date(seconds * 1000).toLocaleDateString('en-GB', {
     weekday: undefined,
     year: undefined,
@@ -9,6 +21,10 @@ const formatDate = seconds => new Date(seconds * 1000).toLocaleDateString('en-GB
 
 const EventCard = ({ details, openOverlay, index }) => {
 
+    /* 
+        Make an array of just composers names from the repertoire list 
+        details.repertoire = [{composer: String, work: String}, {...}]
+    */
     const composers = details.repertoire.reduce((acc, curr) => [...acc, curr.composer], [])
 
     return (

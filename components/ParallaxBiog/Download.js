@@ -1,3 +1,10 @@
+/*
+    Request an up-to-date biog
+        - Simple contact form, email address only
+        - Sends email to client requesting up-to-date emails
+        - Hits api endpoint 'bio-request'
+*/
+
 import { useState } from 'react'
 import styles from './styles/ParallaxBiog.module.css'
 import axios from 'axios'

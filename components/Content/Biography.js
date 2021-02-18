@@ -1,3 +1,8 @@
+/*
+    BIOGRAPHY PAGE CONTENT
+        - Uses modules from the ParallaxBiog component folder
+*/
+
 import { TitleCard, Biog, Download } from '../ParallaxBiog'
 
 const Content = ({ content }) => {

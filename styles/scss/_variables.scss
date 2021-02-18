@@ -1,17 +1,26 @@
+/* Width for mobile media queries */
 $MOBILE: 700px;
 
+/* Fonts as variables */
 $heading-font: 'Didact Gothic', sans-serif;
 $content-font: 'Montserrat', sans-serif;
 
+/* Colour pallette */
 $dark: #000;
 $light: #fff;
 $grey: #f7f7f7;
 
+/* Side margins */
 $desktop-margin: 50px;
 $mobile-margin: 20px;
 
+/* Height of the top banner */
 $desktop-header-height: 95px;
 
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
 @mixin margins-as-margins{
     margin: 0 $desktop-margin;
     @media only screen and (max-width: $MOBILE){
@@ -19,6 +28,10 @@ $desktop-header-height: 95px;
     }
 }
 
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
 @mixin margins-as-paddings{
     padding-left: $desktop-margin;
     padding-right: $desktop-margin;

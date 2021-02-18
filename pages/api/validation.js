@@ -1,4 +1,12 @@
-const validate = (expectations = Number, name, email, message) => {
+/* 
+    Function to validate the bodies of an api request
+        - expectations: Number - the number of parameters the function should be expecting
+        - name: String - should be string of length 2 - 50 chars
+        - email: String - should match the below regex and be fewer than 255 chars (std. limit)
+        - message: String - should be no less than than 30 chars in length
+*/
+
+const validate = (expectations = Number, name = String, email = String, message = String) => {
     
     const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 

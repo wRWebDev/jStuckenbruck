@@ -1,3 +1,14 @@
+/*
+
+    TOC
+    i.      Global styles (body, main, etc.)
+    ii.     Typography
+    iii.    Misc. elements
+    iv.     Animations
+
+*/
+
+/* i. Global styles */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -26,28 +37,44 @@ main{
     background-size: cover;
 }
 
-h1, h2, h3, h4{
+/* ii. Typography */
+h1, 
+h2, 
+h3, 
+h4{
     font-family: $heading-font;
     margin: 10pt 0;
 }
-
+h1{
+    font-size: 5rem; 
+    font-weight: 300
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 1rem;
+}
+p{
+    font-size: 1rem; 
+    line-height: 1.5rem;
+}
 p, article{
     font-family: $content-font;
     margin: 10pt 0;
 }
 
+/* iii. Misc elements (a, button, etc.) */
 a{
     color: inherit;
     text-decoration: none;
 }
 
-h1{font-size: 5rem; font-weight: 300}
-h2{font-size: 1.8rem;}
-h3{font-size: 1.2rem;}
-h4{font-size: 1rem;}
-p{font-size: 1rem; line-height: 1.5rem;}
-
-button, input{
+button, 
+input{
     &:focus{outline: none}
 }
 
@@ -112,10 +139,10 @@ button{
     }
 }
 
+/* iv. Animations */
 .struggle-arrow-down{
     animation: struggle-down 1000ms ease infinite;
 }
-
 @keyframes struggle-right {
     0% {transform: translateX(0)}
     27% {transform: translateX(7px)}

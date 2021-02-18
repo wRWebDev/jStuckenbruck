@@ -1,3 +1,5 @@
+/* Array of social media links */
+
 import { socialMediaIcons } from './socialMediaIcons'
 
 const socialMediaLinks = [

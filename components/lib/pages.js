@@ -1,3 +1,5 @@
+/* Array of links to pages on the site */
+
 const pages = [
     {
         display: 'home',

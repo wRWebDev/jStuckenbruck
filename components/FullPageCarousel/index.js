@@ -1,7 +1,13 @@
+/*
+    Full Page Carousel
+        - This is the fading slider/swiper for the homepage
+        - Takes an array of images and creates slides for each
+        - Also takes children, passed from components/Content/Homepage (the cta button)
+*/
+
 import SwiperCore, { Keyboard, Autoplay, EffectFade } from 'swiper' 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { nanoid } from 'nanoid'
-
 
 SwiperCore.use([Keyboard, Autoplay, EffectFade])
 const FullPageCarousel = ({ folder, images, children }) => {

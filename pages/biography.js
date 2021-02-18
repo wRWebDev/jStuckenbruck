@@ -1,3 +1,9 @@
+/*
+  BIO (/biography)
+    - Load page content server-side
+    (title, body content, image filename)
+*/
+
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Biography'

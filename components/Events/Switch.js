@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+/* Switch between past & future events */
+
+import { useState } from 'react'
 
 const Switch = ({ fetchEvents }) => {
 

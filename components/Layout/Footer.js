@@ -1,3 +1,7 @@
+//FIXME: Refactor this array away from this file 
+    // - infact isn't it in the /lib folder... 
+    //   which for some reason has wound up in components/
+
 const pages = [
     {
         display: 'home',
@@ -21,6 +25,12 @@ const pages = [
     },
 ]
 
+/*
+    Footer
+        - display sitemap
+        - display client details/logo
+        - link out to my site
+*/
 import Link from 'next/link'
 
 const Footer = ({ hideFooter }) => {

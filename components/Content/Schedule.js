@@ -1,3 +1,10 @@
+/*
+    HOMEPAGE CONTENT
+        - Function to fetch past or future events depending on user selection
+        - Displays title & body content
+        - Sets page image as background of the <main> element
+*/
+
 import firebase from '../../db/firebase'
 import { Switch, EventList, Overlay } from '../Events'
 import { useState, useEffect } from 'react'
@@ -10,7 +17,7 @@ const Content = ({ content, upcomingEvents }) => {
     const [ viewingFuture, setViewingFutureTo ] = useState(true)
     const [ currentEvent, setCurrentEventTo ] = useState({})
 
-    /* Set the background image to BSH */
+    /* Set the background image */
     useEffect(() => {
         const main = document.querySelector('main')
         main.style.marginTop = 0
@@ -20,16 +27,19 @@ const Content = ({ content, upcomingEvents }) => {
 
     /* Function for fetching events from db */
     const fetchEvents = async future => {
-        // dependent variables & functions
+        // dependent variables
         const now = new Date()
         const queryBase = firebase.firestore().collection('schedule')
+        // function to transform snapshot into an array of objects
+        // each object is a distinct event (possible with multiple performances)
         const handleSnapshot = snapshot => {
             const events = []
             snapshot.forEach(doc => {events.push(doc.data())})
             return events
         }
-        // main function
+        // fetch events from db
         if(!future){
+            // fetch past events
             setEventListTo([])
             setViewingFutureTo(false)
             const pastEvents = await queryBase
@@ -40,6 +50,7 @@ const Content = ({ content, upcomingEvents }) => {
                 .then(snap => handleSnapshot(snap))
             setEventListTo(pastEvents)
         }else{
+            // fetch future events
             setEventListTo([])
             setViewingFutureTo(true)
             const futureEvents = await queryBase
@@ -52,6 +63,11 @@ const Content = ({ content, upcomingEvents }) => {
         }
     }
 
+    /* 
+        Function to open a full-screen overlay
+            - displays selected event's details
+            - slides in from the bottom of the screen
+    */
     const openOverlay = details => {
         document.getElementById('eventOverlay').style.top = 0
         setCurrentEventTo(details)

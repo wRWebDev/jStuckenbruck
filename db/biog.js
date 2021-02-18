@@ -1,4 +1,7 @@
-/* A copy of the biog for uploading during testing */
+/* 
+    REMOVE AFTER TESTING COMPLETE
+    A copy of the biog for uploading during testing 
+*/
 
 export const biog = `In demand in both the Opera House and Concert Hall, American/British Conductor Johann Stuckenbruck is a regular assistant conductor at [Glyndebourne] and guest conductor with the [San Diego Symphony].
 

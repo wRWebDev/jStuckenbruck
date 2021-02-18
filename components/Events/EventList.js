@@ -1,3 +1,9 @@
+/*
+    Print the list of events
+        - if the event has a type of 'year', show a year card
+        - if the event has a type of 'event', show an event card
+*/
+
 import EventCard from './EventCard'
 import YearCard from './YearCard'
 import { nanoid } from 'nanoid'

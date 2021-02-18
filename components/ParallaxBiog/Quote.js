@@ -1,3 +1,9 @@
+/* 
+    Wrap quote... 
+    Why's this here & not in Biog.js?
+    Too much refactoring?
+*/
+
 import styles from './styles/ParallaxBiog.module.css'
 
 export default function Quote({ quote = Object }){

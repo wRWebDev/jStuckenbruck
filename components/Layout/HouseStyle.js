@@ -1,10 +1,20 @@
+/*
+    Main HouseStyle document
+        - Called by all pages (/pages/{page})
+        - Includes Header & Footer
+        - Wraps chidren in <main> element
+        - Sets meta-tags and page title etc.
+            - TODO: 
+                [ ] Finish defining meta tags
+*/
+
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
 const HouseStyle = ({ properties, children }) => {
     
-    const { title, description, image, darkMode, hideFooter } = properties
+    const { title, description, darkMode, hideFooter } = properties
 
     return (
         <>

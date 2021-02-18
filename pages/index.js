@@ -1,7 +1,14 @@
+/*
+  HOMEPAGE (/)
+    - Load page content server-side
+    (title, array of images for slider)
+    - Enable dark-mode
+*/
+
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Homepage'
-// import { useEffect } from 'react'
+import { useEffect } from 'react'
 
 const pageDetails = {
   name: 'home',
@@ -14,10 +21,14 @@ const pageDetails = {
 
 const Page = ({ content }) => {
 
-  // useEffect(()=>{
-  //   document.getElementById('site-header').style.background = 'transparent !important'
-  //   document.getElementById('site-header').style.backdropFilter = 'none'
-  // }, [])
+  /* 
+    Remove the background and background blur from the top banner
+    as it cuts off the client's head
+  */
+  useEffect(()=>{
+    document.getElementById('site-header').style.background = 'transparent !important'
+    document.getElementById('site-header').style.backdropFilter = 'none'
+  }, [])
 
   return (
     <>

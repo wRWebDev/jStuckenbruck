@@ -1,3 +1,13 @@
+/*
+    MEDIA PAGE CONTENT
+        - React-Firebase-Hooks:
+            - Fetches filenames of images
+            - Fetches data about videos
+        - Displays title and body content
+        - Displays coverflow slider for image gallery
+        - Embeds youtube videos and shows library as a slider
+*/
+
 import CoverFlowCarousel from '../CoverFlowCarousel'
 import VideoGallery from '../VideoGallery'
 import firebase from '../../db/firebase'
@@ -9,7 +19,7 @@ const Content = ({ content }) => {
     const mediaQuery = firebase.firestore().collection('media').limit(2)
     const [ media ] = useCollectionDataOnce(mediaQuery, { idField: 'id' })
 
-    const { title, body, image } = content
+    const { title, body } = content
 
     return (
         <>

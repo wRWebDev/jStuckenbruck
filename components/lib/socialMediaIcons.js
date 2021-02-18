@@ -1,3 +1,5 @@
+/* SVGs of Social Media Icons */
+
 const facebook = `
 	<svg enable-background="new 0 0 1024 1024" height="1024px" id="Layer_1" version="1.1" viewBox="0 0 1024 1024" width="1024px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="menu-socmed-icon">
 		<g id="Background">

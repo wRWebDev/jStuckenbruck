@@ -1,3 +1,9 @@
+/*
+    CONTACT PAGE CONTENT
+        - Displays the title and body content from the db
+        - Uses the ContactForm module
+*/
+
 import ContactForm from '../ContactForm'
 
 const Content = ({ content }) => {

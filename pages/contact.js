@@ -1,3 +1,9 @@
+/*
+  CONTACT (/contact)
+    - Load page content server-side
+    (title, body content)
+*/
+
 import firebase from '../db/firebase'
 import HouseStyle from '../components/Layout/HouseStyle'
 import Content from '../components/Content/Contact'

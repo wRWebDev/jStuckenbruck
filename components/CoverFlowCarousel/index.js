@@ -1,10 +1,21 @@
+/* 
+    COVERFLOW CAROUSEL
+
+        - Transforms an array of images passed as a prop (images) into a slider
+        - The slider is set to use the 'coverflow' effect
+        - Autoplay can be enabled, but the client doesn't like this
+        - If images are clicked on, they open a full-screen view
+        - Each swiper (coverflow/fullscreen) controlls the position of the other
+
+*/
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Keyboard, Mousewheel, EffectCoverflow, Controller, Autoplay, Navigation } from 'swiper' 
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { RemoveScroll } from 'react-remove-scroll';
 import { useState } from 'react'
-import { nanoid, urlAlphabet } from 'nanoid'
+import { nanoid } from 'nanoid'
 
 
 const CoverFlowCarousel = ({ images }) => {
@@ -13,8 +24,8 @@ const CoverFlowCarousel = ({ images }) => {
     const [ fullScreenSwiper, setFullScreenSwiperTo ] = useState(null)
     const [ showingFullscreen, setShowingFullscreenTo ] = useState(false)
 
+    /* Function to open/close full-screen 'lightbox' view */
     const toggleFullscreen = () => {
-        // context.toggleShowingHeader()
         setShowingFullscreenTo(!showingFullscreen)
     }
 
@@ -23,6 +34,17 @@ const CoverFlowCarousel = ({ images }) => {
     return (
         <>
             <div className={styles.moduleWrapper}>
+
+                {/*
+                    Coverflow Swiper
+                        - n.b. mousewheel - forceToAxis
+                            - this means that up/down scrolling isn't listend for
+                            - therefore normal user scrolling isn't interrupted
+                        - keyboard navigation enabled
+                        - infinite loop
+                        - inactive slides are greyed out, active slides in colour
+                */}
+
                 <Swiper
                     effect="coverflow"
                     slidesPerView={1.5}
@@ -68,7 +90,20 @@ const CoverFlowCarousel = ({ images }) => {
                 </Swiper>
             </div>
 
-            {/* Fullscreen */}
+
+
+
+
+            {/* 
+                Fullscreen "Lightbox" View 
+                    - has scroll removed so page doesn't move in the background
+                    - has navigation arrows
+                    - doesn't need keyboard enabled as key presses are still logged by the
+                      coverflow swiper.
+                        
+            */}
+
+
             {
                 <RemoveScroll enabled={showingFullscreen ? true : false}>
                     {

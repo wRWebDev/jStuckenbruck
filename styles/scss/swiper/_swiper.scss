@@ -1,3 +1,8 @@
+/* 
+  Mostly provided by Swiper JS.
+   - see https://swiperjs.com for more info.
+*/
+
 @import 'swiper-thumbs';
 @import 'swiper-vars';
 @import 'swiper-lazy';
@@ -30,6 +35,8 @@
   z-index: 1;
 }
 
+/* Makes the swiper element full page-width 
+when container has padding of $desktop-margin */
 .stretch-left{
   .swiper-container{
     width: calc(53.68vw - #{$desktop-margin});

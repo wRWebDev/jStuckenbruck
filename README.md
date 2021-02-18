@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+## 5 page portforlio for a musician
 
-## Getting Started
+### Table of Contents 
+ ***♩ - Technologies***
+ ***♫ - Setup***
+ ***🎶 - Support***
 
-First, run the development server:
+### ♩ Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project was built using [NextJS](https://nextjs.org), deployed though [Vercel](https://vercel.com). 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project uses a NoSQL database - Firestore, from [Google's Cloud Firebase](https://firebase.google.com) service.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+As such, the project is written in Javascript, with components using the JSX format.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Styles were written in SCSS before being rendered into CSS files, 1 directory higher. I would change this next time around and find a cleaner solution. All styles folders, globabl and on a component level include one css file, and a sub-folder named `scss` which houses segmented stylesheets.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### ♫ Setup
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone this repo
+2. run `npm i` to install dependencies listed in `package.json`
+3. run `npm run dev` to run development server (default = `localhost:3000`)
+4. ensure scss compiler is set to push changes to a file by the same name, 1 directory higher than the `.scss` file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> If you take on ownership of this repo, please be aware that at present, any changes that are pushed to the main branch will result in a redeployment of the site which reflects those changes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> ***N.B.*** This project will not work without a connected firebase project. Please contact me for the information regarding the data-structure and attached security rules.
 
-## Deploy on Vercel
+### 🎶 Support
+For further assistance, please open an issue here, or contact me via the contact form on [my website](https://wrweb.dev).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

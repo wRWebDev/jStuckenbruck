@@ -1,4 +1,7 @@
-/* A copy of the events from the old site for uploading during testing */
+/* 
+  REMOVE AFTER TESTING COMPLETE
+  A copy of the events from the old site for uploading during testing 
+*/
 
 const eventsToUpload = [
   {

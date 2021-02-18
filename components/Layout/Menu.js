@@ -1,3 +1,11 @@
+/* 
+    Site Menu 
+        - Slides in from RHS
+        - Displays links 
+        - Changes appearance based on dark/light mode
+        - If clicked outside of, should disappear    
+*/
+
 import OutsideClickHandler from 'react-outside-click-handler'
 import { useEffect } from 'react'
 import Link from 'next/link'
@@ -6,12 +14,14 @@ import { pages, socialMediaLinks } from '../lib'
 
 const Menu = ({ showing, darkMode, toggleMenu }) => {
 
+    /* add/remove .showing from #menu based on "showing" prop */
     useEffect(()=>{
         showing
             ? document.getElementById('menu').classList.add('showing')
             : document.getElementById('menu').classList.remove('showing')
     }, [showing])
 
+    /* On pageload, paint SVGs */
     useEffect(()=>{
         socialMediaLinks.forEach((sm)=>{
             document.getElementById(`sm-${sm.name}`).innerHTML = sm.icon
@@ -22,6 +32,7 @@ const Menu = ({ showing, darkMode, toggleMenu }) => {
         }
     }, [])
 
+    /* Make an array of pages */
     const links = pages
         .map((page, i) =>
                 <Link href={page.link} key={i}>

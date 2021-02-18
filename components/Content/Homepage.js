@@ -1,9 +1,15 @@
+/*
+    HOMEPAGE CONTENT
+        - FullPageCarousel provides full-screen slider with fade effect
+        - Wrapped in that is a CTA button, linking to the biog page
+*/
+
 import FullPageCarousel from '../FullPageCarousel'
 import Link from 'next/link'
 
 const Content = ({ content }) => {
 
-    const { title, text, images} = content
+    const { images} = content
 
 
     return (

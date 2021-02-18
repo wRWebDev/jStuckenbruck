@@ -38,6 +38,7 @@ header{
 		justify-content: center;
         cursor: pointer;
         
+		/* Draw hamburger from 3 child divs of #menuButton */
         .hamburger{
             height: 3px;
 			margin: 2px 0;
@@ -70,7 +71,7 @@ header{
             }
         }
 
-        // When the menu is showing
+        /* When the menu is showing */
         &.showing {
 			.hamburger {
                 // Make an X shape
