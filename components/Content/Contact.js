@@ -58,6 +58,8 @@ const Content = ({ content }) => {
                             <a 
                                 href={link.link}
                                 className="contact-sm-list"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             />
                         </li>
                     ))

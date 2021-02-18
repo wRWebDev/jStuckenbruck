@@ -74,6 +74,12 @@
 		flex-direction: row;
 		align-items: flex-end;
 		justify-content: flex-end;
+
+		@media only screen and (max-width: $MOBILE){
+			align-items: center;
+			justify-content: center;
+		}
+
 		li {
 			// Resize svgs to 36x36px
 			.menu-socmed-icon {
