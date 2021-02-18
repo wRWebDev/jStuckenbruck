@@ -31,7 +31,7 @@ const VideoGallery = ({ videos }) => {
                 <div className={styles.video}>
                     <iframe
                         src={`https://www.youtube.com/embed/${selectedVideo.embedCode}`} 
-                        frameborder="0" 
+                        frameBorder="0" 
                         allow="
                             accelerometer; 
                             autoplay; 
@@ -39,7 +39,7 @@ const VideoGallery = ({ videos }) => {
                             encrypted-media; 
                             gyroscope; 
                             picture-in-picture" 
-                        allowfullscreen
+                        allowFullScreen
                         className='loading-background'
                     />
 

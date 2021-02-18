@@ -33,7 +33,7 @@
     top: 30pt;
     right: 15pt;
     width: 48px;
-    height: 48px;
+    height: 30px;
     border: none;
     z-index: 2;
     background: transparent;
@@ -60,8 +60,8 @@
     
     div{
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        right: 0;
         width: 36px;
         height: 2px;
         background: #fff;
@@ -72,5 +72,19 @@
         &:nth-child(2){
             transform: rotateZ(-45deg);
         }
+    }
+}
+
+.fullScreenInfo{
+    padding: 10pt 15pt;
+    p,
+    h3{
+        text-shadow: 1px 1px rgba(0,0,0,0.7);
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
     }
 }

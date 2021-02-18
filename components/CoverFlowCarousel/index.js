@@ -138,6 +138,10 @@ const CoverFlowCarousel = ({ images }) => {
                                                     backgroundRepeat: 'no-repeat'
                                                 }}
                                             >
+                                                <div className={styles.fullScreenInfo}>
+                                                    <h3>{img.title}</h3>
+                                                    <p>{img.credit}</p>
+                                                </div>
                                             </SwiperSlide>
                                         ))
                                     }
