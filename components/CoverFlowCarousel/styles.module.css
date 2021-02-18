@@ -1,3 +1,16 @@
+/* Width for mobile media queries */
+/* Fonts as variables */
+/* Colour pallette */
+/* Side margins */
+/* Height of the top banner */
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
 .moduleWrapper {
   margin: 0 -50px 0 -50px;
   padding: 5vh 50px;

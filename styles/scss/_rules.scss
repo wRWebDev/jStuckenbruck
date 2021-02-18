@@ -139,6 +139,24 @@ button{
     }
 }
 
+svg:hover{
+    .facebook {
+        fill: #2a6fc9;
+    }
+    .instagram {
+        fill: #ca2d8c;
+    }
+    .instagram_lens {
+        fill: #8d1ea3;
+    }
+    .twitter {
+        fill: #2c88ff;
+    }
+    .youtube {
+        fill: #c61a1a;
+    }
+}
+
 /* iv. Animations */
 .struggle-arrow-down{
     animation: struggle-down 1000ms ease infinite;

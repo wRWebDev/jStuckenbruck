@@ -1,5 +1,33 @@
 @charset "UTF-8";
+/* 
+    Import 2 fonts 
+     - Didact Gothic (for headers)
+     - Montserrat: 300, 400, 600 weights (for body content)    
+*/
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:wght@300;400;600&display=swap");
+/* Width for mobile media queries */
+/* Fonts as variables */
+/* Colour pallette */
+/* Side margins */
+/* Height of the top banner */
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
+/*
+
+    TOC
+    i.      Global styles (body, main, etc.)
+    ii.     Typography
+    iii.    Misc. elements
+    iv.     Animations
+
+*/
+/* i. Global styles */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,19 +57,13 @@ main {
   background-size: cover;
 }
 
-h1, h2, h3, h4 {
+/* ii. Typography */
+h1,
+h2,
+h3,
+h4 {
   font-family: "Didact Gothic", sans-serif;
   margin: 10pt 0;
-}
-
-p, article {
-  font-family: "Montserrat", sans-serif;
-  margin: 10pt 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 h1 {
@@ -66,7 +88,19 @@ p {
   line-height: 1.5rem;
 }
 
-button:focus, input:focus {
+p, article {
+  font-family: "Montserrat", sans-serif;
+  margin: 10pt 0;
+}
+
+/* iii. Misc elements (a, button, etc.) */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus,
+input:focus {
   outline: none;
 }
 
@@ -160,6 +194,27 @@ button {
   color: #fff;
 }
 
+svg:hover .facebook {
+  fill: #2a6fc9;
+}
+
+svg:hover .instagram {
+  fill: #ca2d8c;
+}
+
+svg:hover .instagram_lens {
+  fill: #8d1ea3;
+}
+
+svg:hover .twitter {
+  fill: #2c88ff;
+}
+
+svg:hover .youtube {
+  fill: #c61a1a;
+}
+
+/* iv. Animations */
 .struggle-arrow-down {
   -webkit-animation: struggle-down 1000ms ease infinite;
           animation: struggle-down 1000ms ease infinite;
@@ -289,6 +344,7 @@ button {
   }
 }
 
+/* Global classes */
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +478,12 @@ button {
   line-height: 2rem;
 }
 
+/* 
+    Grouping of the main house-style elements
+     - Header
+     - Menu
+     - Footer
+*/
 header {
   position: fixed;
   width: 100vw;
@@ -487,6 +549,8 @@ header #menuButton {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  /* Draw hamburger from 3 child divs of #menuButton */
+  /* When the menu is showing */
 }
 
 header #menuButton .hamburger {
@@ -682,54 +746,6 @@ footer p {
   width: 100%;
 }
 
-#social-media-menu {
-  margin-top: 30pt;
-}
-
-#social-media-menu ul {
-  list-style: none;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-#social-media-menu ul li .menu-socmed-icon {
-  width: 36px;
-  height: 36px;
-  margin-left: 10px;
-}
-
-#social-media-menu ul li .menu-socmed-icon:hover .facebook {
-  fill: #2a6fc9;
-}
-
-#social-media-menu ul li .menu-socmed-icon:hover .instagram {
-  fill: #ca2d8c;
-}
-
-#social-media-menu ul li .menu-socmed-icon:hover .instagram_lens {
-  fill: #8d1ea3;
-}
-
-#social-media-menu ul li .menu-socmed-icon:hover .twitter {
-  fill: #2c88ff;
-}
-
-#social-media-menu ul li .menu-socmed-icon:hover .youtube {
-  fill: #c61a1a;
-}
-
 #menu-socialMedia {
   width: 100%;
   margin-top: 10pt;
@@ -760,26 +776,10 @@ footer p {
   cursor: pointer;
 }
 
-#menu-socialMedia ul li .menu-socmed-icon:hover .facebook {
-  fill: #2a6fc9;
-}
-
-#menu-socialMedia ul li .menu-socmed-icon:hover .instagram {
-  fill: #ca2d8c;
-}
-
-#menu-socialMedia ul li .menu-socmed-icon:hover .instagram_lens {
-  fill: #8d1ea3;
-}
-
-#menu-socialMedia ul li .menu-socmed-icon:hover .twitter {
-  fill: #2c88ff;
-}
-
-#menu-socialMedia ul li .menu-socmed-icon:hover .youtube {
-  fill: #c61a1a;
-}
-
+/* 
+  Mostly provided by Swiper JS.
+   - see https://swiperjs.com for more info.
+*/
 .swiper-container-thumbs {
   height: 100%;
 }
@@ -973,6 +973,19 @@ footer p {
           filter: grayscale(0);
 }
 
+/* Width for mobile media queries */
+/* Fonts as variables */
+/* Colour pallette */
+/* Side margins */
+/* Height of the top banner */
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
 @font-face {
   font-family: 'swiper-icons';
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
@@ -996,6 +1009,8 @@ footer p {
   z-index: 1;
 }
 
+/* Makes the swiper element full page-width 
+when container has padding of $desktop-margin */
 .stretch-left .swiper-container {
   width: calc(53.68vw - 50px);
 }

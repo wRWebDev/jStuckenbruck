@@ -1,30 +1,3 @@
-//FIXME: Refactor this array away from this file 
-    // - infact isn't it in the /lib folder... 
-    //   which for some reason has wound up in components/
-
-const pages = [
-    {
-        display: 'home',
-        link: '/'
-    },
-    {
-        display: 'biography',
-        link: '/biography'
-    },
-    {
-        display: 'schedule',
-        link: '/schedule'
-    },
-    {
-        display: 'media',
-        link: '/media'
-    },
-    {
-        display: 'contact',
-        link: '/contact'
-    },
-]
-
 /*
     Footer
         - display sitemap
@@ -32,6 +5,7 @@ const pages = [
         - link out to my site
 */
 import Link from 'next/link'
+import { pages } from '../lib/pages'
 
 const Footer = ({ hideFooter }) => {
 

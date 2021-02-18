@@ -20,7 +20,7 @@ const pageDetails = {
 }
 
 const Page = ({ content }) => {
-
+ 
   /* 
     Remove the background and background blur from the top banner
     as it cuts off the client's head

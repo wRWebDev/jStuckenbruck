@@ -1,3 +1,16 @@
+/* Width for mobile media queries */
+/* Fonts as variables */
+/* Colour pallette */
+/* Side margins */
+/* Height of the top banner */
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
 .pageWrapper {
   background: rgba(255, 255, 255, 0.7);
   width: 80%;
@@ -165,6 +178,19 @@
   color: #a92626;
 }
 
+/* Width for mobile media queries */
+/* Fonts as variables */
+/* Colour pallette */
+/* Side margins */
+/* Height of the top banner */
+/* 
+    Side margins as left and right MARGIN properties 
+     - for use with other elements
+*/
+/*
+    Side margins as left and right PADDING properties 
+     - for use with other elements
+*/
 .overlayWrapper {
   position: fixed;
   top: 150%;
