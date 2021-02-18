@@ -1,5 +1,5 @@
 .pageWrapper{
-    background: rgba(255,255,255,0.7);
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
     // backdrop-filter: blur(1rem);
     width: 80%;
     padding-bottom: 80pt;
@@ -7,5 +7,5 @@
     @media only screen and (max-width: $MOBILE){
         width: 100%;
     }
-    border-right: 2px solid rgba(255,255,255,0.7);
+    // border-right: 2px solid rgba(255,255,255,0.7);
 }
