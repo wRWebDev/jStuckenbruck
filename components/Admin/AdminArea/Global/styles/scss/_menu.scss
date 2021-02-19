@@ -1,0 +1,75 @@
+.adminMenu{
+    grid-area: menu;
+    width: 104px;
+    height: calc(100% - $banner-height);
+    padding: $mobile-margin 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0,0,0,0.6);
+
+    .adminMenuCloseButton,
+    .adminMenuSignOut{
+        display: none;
+    }
+
+    @media only screen and (max-width: $MOBILE){
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(25,25,25,1);
+        z-index: -99;
+        opacity: 0;
+        transition: opacity 300ms ease;
+
+        &.showing{
+            z-index: 99;
+            opacity: 1;
+        }
+
+        .adminMenuCloseButton{
+            display: block;
+            position: absolute;
+            top: $mobile-margin;
+            right: $mobile-margin;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            div{
+                background: #fff;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                &:nth-child(1){
+                    transform: rotateZ(45deg);
+                }
+                &:nth-child(2){
+                    transform: rotateZ(-45deg);
+                }
+            }
+        }
+        .adminMenuSignOut{
+            display: block;
+        }
+        
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 1.5rem;
+            li{
+                margin: 10pt 0;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

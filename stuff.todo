@@ -19,3 +19,18 @@ Editor:
     [ ] Gallery Editor
     [ ] Video Editor
     [ ] Event Editor
+
+
+Admin Area: 
+    [o] Settings Page
+        [-] Login Module
+            [-] Login functionality
+        [o] Admin Area Module
+            [o] House-style elements
+                [-] Header
+                    [-] Sign out functionality
+                [ ] Footer
+                [ ] Menu
+                [ ] Main element - children of which 
+            [ ] 
+            

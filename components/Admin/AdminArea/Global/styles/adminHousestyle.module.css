@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap");
+.adminWrapper {
+  margin: 30pt 10%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  min-height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 104px calc(100% - 104px);
+      grid-template-columns: 104px calc(100% - 104px);
+  -ms-grid-rows: 66px 1fr;
+      grid-template-rows: 66px 1fr;
+      grid-template-areas: "banner banner" "menu content";
+  font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  .adminWrapper {
+    min-height: 100vh;
+    margin: 0 0;
+    border-radius: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "banner" "content";
+  }
+}
+
+.adminWrapper .adminMainContent {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  width: calc(100% - 104px);
+  height: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media only screen and (max-width: 800px) {
+  .adminWrapper .adminMainContent {
+    width: 100%;
+  }
+}
+
+.adminWrapper .adminMainContent h1,
+.adminWrapper .adminMainContent h2 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .adminWrapper .adminMainContent h1,
+  .adminWrapper .adminMainContent h2 {
+    text-align: center;
+  }
+}
+
+.adminWrapper .adminMainContent h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.adminWrapper .adminMainContent h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+}
+
+.adminWrapper .adminMainContent .userInterface {
+  width: 100%;
+  padding: 20pt 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 800px) {
+  .adminWrapper .adminMainContent .userInterface {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.banner {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: banner;
+  width: 100%;
+  height: 66px;
+  margin: 0 0;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner img {
+  height: 31px;
+}
+
+.banner .menuButton {
+  display: none;
+}
+
+.banner .logOut {
+  display: block;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner {
+    padding: 0 15px;
+  }
+  .banner .menuButton {
+    display: block;
+    width: 28px;
+    cursor: pointer;
+  }
+  .banner .menuButton div {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin: 5pt 0;
+  }
+  .banner .logOut {
+    display: none;
+  }
+}
+
+.adminMenu {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  width: 104px;
+  height: calc(100% - $banner-height);
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.adminMenu .adminMenuCloseButton,
+.adminMenu .adminMenuSignOut {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .adminMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #191919;
+    z-index: -99;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+  }
+  .adminMenu.showing {
+    z-index: 99;
+    opacity: 1;
+  }
+  .adminMenu .adminMenuCloseButton {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  .adminMenu .adminMenuCloseButton div {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+  .adminMenu .adminMenuCloseButton div:nth-child(1) {
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  .adminMenu .adminMenuCloseButton div:nth-child(2) {
+    -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  .adminMenu .adminMenuSignOut {
+    display: block;
+  }
+  .adminMenu ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .adminMenu ul li {
+    margin: 10pt 0;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 10pt 0;
+  text-align: center;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    display: none;
+  }
+}

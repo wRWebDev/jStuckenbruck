@@ -1,0 +1,71 @@
+.adminWrapper{
+    margin: 30pt 10%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(30px);
+    min-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 104px calc(100% - 104px);
+    grid-template-rows: 66px 1fr;
+    grid-template-areas: "banner banner" "menu content";
+    font-family: $admin-font;
+   
+    @media only screen and (max-width: $MOBILE){
+        min-height: 100vh;
+        margin: 0 0;
+        border-radius: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: "banner" "content";
+    }
+
+    .adminMainContent{
+        grid-area: content;
+        width: calc(100% - 104px);
+        height: 100%;
+        padding: $mobile-margin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media only screen and (max-width: $MOBILE){
+            width: 100%;
+        }
+
+        h1, 
+        h2{
+            width: 100%;
+            @media only screen and (max-width: $MOBILE) {
+                text-align: center;
+            }
+        }
+        h1{
+            font-size: 3rem;
+            margin: 0;
+        }
+        h2{
+            font-size: 1rem;
+            font-weight: 300;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .userInterface{
+            width: 100%;
+            padding: 20pt 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            align-items: flex-start;
+
+            @media only screen and (max-width: $MOBILE){
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+
+    }
+}
