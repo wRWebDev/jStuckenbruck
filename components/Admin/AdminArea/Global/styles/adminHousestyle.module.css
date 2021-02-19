@@ -33,7 +33,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  width: calc(100% - 104px);
+  width: 100%;
   height: 100%;
   padding: 15px;
   display: -webkit-box;
@@ -49,12 +49,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-@media only screen and (max-width: 800px) {
-  .adminWrapper .adminMainContent {
-    width: 100%;
-  }
 }
 
 .adminWrapper .adminMainContent h1,
@@ -195,6 +189,24 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+.adminMenu ul {
+  list-style: none;
+  height: 100%;
+}
+
+.adminMenu ul li {
+  margin: 7pt 0;
+  cursor: pointer;
+}
+
+.adminMenu ul li img {
+  width: 60px;
+}
+
+.adminMenu ul li span {
+  display: none;
+}
+
 .adminMenu .adminMenuCloseButton,
 .adminMenu .adminMenuSignOut {
   display: none;
@@ -252,7 +264,6 @@
     display: block;
   }
   .adminMenu ul {
-    list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -260,12 +271,24 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     font-size: 1.5rem;
   }
   .adminMenu ul li {
     margin: 10pt 0;
     cursor: pointer;
+  }
+  .adminMenu ul li img {
+    display: none;
+  }
+  .adminMenu ul li span {
+    display: block;
   }
 }
 

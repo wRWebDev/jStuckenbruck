@@ -35,7 +35,8 @@ const Menu = ({ changeSection }) => {
                                 changeSection(section.name)
                             }}
                         >
-                            {section.name}
+                            <img src={`/admin/${section.icon}.svg`} />
+                            <span>{section.name}</span>
                         </li>
                     ))
                 }

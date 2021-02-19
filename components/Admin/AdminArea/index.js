@@ -27,7 +27,7 @@ const AdminArea = () => {
             // case 'Settings':
             //     return < /> 
             default:
-                return <Dashboard />
+                return <Dashboard changeSection={changeSection} />
         }
     }
 

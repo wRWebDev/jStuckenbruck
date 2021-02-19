@@ -6,7 +6,7 @@ const PageSelect = () => {
             <h1>Page Content</h1>
             <h2>Select a page to edit</h2>
             <div className={styles.userInterface}>
-                Hi                
+                Selector...                
             </div>
         </>
     )

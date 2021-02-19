@@ -22,17 +22,13 @@
 
     .adminMainContent{
         grid-area: content;
-        width: calc(100% - 104px);
+        width: 100%;
         height: 100%;
         padding: $mobile-margin;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-
-        @media only screen and (max-width: $MOBILE){
-            width: 100%;
-        }
 
         h1, 
         h2{

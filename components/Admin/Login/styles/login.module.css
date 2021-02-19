@@ -1,0 +1,42 @@
+.loginPageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginPageWrapper .loginPageInner {
+  width: 85%;
+  max-width: 313px;
+  padding: 50pt 25px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.loginPageWrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginPageWrapper form img {
+  width: 80%;
+  margin-bottom: 30pt;
+}

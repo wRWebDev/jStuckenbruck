@@ -1,0 +1,27 @@
+.loginPageWrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loginPageInner{
+        width: 85%;
+        max-width: 313px;
+        padding: 50pt 25px;
+        background: rgba(0,0,0,0.6);
+        border-radius: 10px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            width: 80%;
+            margin-bottom: 30pt;
+        }
+    }
+}

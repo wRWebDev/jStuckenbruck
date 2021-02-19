@@ -1,0 +1,24 @@
+.adminTextInput{
+    display: block;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 20pt;
+
+    input{
+        width: 100%;
+        padding: 10pt 0;
+        color: #fff;
+        text-align: center;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 7px;
+        font-size: 1rem;
+
+        &::placeholder{
+            color: #fff;
+            font-weight: 400;
+        }
+    }
+}

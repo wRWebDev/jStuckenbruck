@@ -11,7 +11,7 @@ const Layout = ({ children, changeSection }) => {
                 <Head>
                     <title>wRWebDev // JStuckenbruck Site Editor</title>
                 </Head>
-                <Header />
+                <Header changeSection={changeSection} />
                 <Menu changeSection={changeSection} />
                 <div className={styles.adminMainContent}>
                     { children }

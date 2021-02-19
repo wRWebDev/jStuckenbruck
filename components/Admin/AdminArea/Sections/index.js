@@ -1,23 +1,23 @@
 const listOfSections = [
     {
         name: 'Pages',
-        icon: '',
+        icon: 'pages',
         description: 'Edit the title, content, and main image for each page'
     },{
         name: 'Schedule',
-        icon: '',
+        icon: 'schedule',
         description: 'Edit your concert schedule or add more engagements'
     },{
         name: 'Photo Gallery',
-        icon: '',
+        icon: 'photos',
         description: 'Upload new photos, edit captions and credit photogrpahers.'
     },{
         name: 'Videos',
-        icon: '',
+        icon: 'videos',
         description: 'Edit the list of Youtube videos you have embedded in your media page'
     },{
         name: 'Settings',
-        icon: '',
+        icon: 'settings',
         description: 'Update your password and other account settings'
     }
 ]

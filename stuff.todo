@@ -25,12 +25,18 @@ Admin Area:
     [o] Settings Page
         [-] Login Module
             [-] Login functionality
+            [ ] Style login page
         [o] Admin Area Module
-            [o] House-style elements
+            [-] House-style elements
                 [-] Header
                     [-] Sign out functionality
-                [ ] Footer
-                [ ] Menu
-                [ ] Main element - children of which 
-            [ ] 
-            
+                [-] Footer
+                [-] Menu
+                [-] Main element - children of which 
+            [-] Section switch
+            [o] Individual sections
+                [-] Dashboard
+                [ ] Page selector
+                [ ] Event selector
+                [ ] Image selector
+                [ ] Video selector

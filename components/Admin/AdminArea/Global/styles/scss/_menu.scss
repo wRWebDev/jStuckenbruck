@@ -9,6 +9,24 @@
     justify-content: flex-start;
     background: rgba(0,0,0,0.6);
 
+    ul{
+        list-style: none;
+        height: 100%;
+
+        li{
+            margin: 7pt 0;
+            cursor: pointer;
+
+            img{
+                width: 60px;
+            }
+
+            span{
+                display: none;
+            }
+        }
+    }
+
     .adminMenuCloseButton,
     .adminMenuSignOut{
         display: none;
@@ -60,14 +78,21 @@
         }
         
         ul{
-            list-style: none;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             font-size: 1.5rem;
             li{
                 margin: 10pt 0;
                 cursor: pointer;
+                img{
+                    display: none;
+                }
+                span{
+                    display: block;
+                }
             }
         }
 

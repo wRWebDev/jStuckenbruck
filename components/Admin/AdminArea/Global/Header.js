@@ -2,11 +2,15 @@ import styles from './styles/adminHousestyle.module.css'
 import firebase from '../../../../db/firebase'
 const auth = firebase.auth()
 
-const Header = ({ children }) => {
+const Header = ({ children, changeSection }) => {
     return (
         <>
             <div className={styles.banner}>
-                <img src="/wrwebdev.svg" />
+                <img 
+                    src="/wrwebdev.svg" 
+                    onClick={()=>{changeSection('Dashboard')}}
+                    style={{cursor: 'pointer'}}   
+                />
                 <div 
                     className={styles.menuButton}
                     onClick={() => document.getElementById('adminMenu').classList.add(styles.showing)}    
