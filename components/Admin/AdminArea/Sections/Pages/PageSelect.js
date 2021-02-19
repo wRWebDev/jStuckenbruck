@@ -3,7 +3,7 @@ import firebase from '../../../../../db/firebase'
 import { useCollectionDataOnce } from 'react-firebase-hooks/firestore'
 import { Card } from '../../../Cards'
 
-const PageSelect = () => {
+const PageSelect = ({ changeSection }) => {
 
     const [ pages ] = useCollectionDataOnce(
         firebase.firestore().collection('pages').orderBy('ordering'), 
@@ -12,7 +12,10 @@ const PageSelect = () => {
         }
     )
 
-    console.log(pages)
+    const editPage = id => {
+        console.log('Trying to navigate to ', id)
+        changeSection('Page Edit', id)
+    }
 
     return (
         <>
@@ -24,6 +27,8 @@ const PageSelect = () => {
                         ? 'Loading pages...'
                         : pages.map((page, i) => (
                             <Card 
+                                action={editPage}
+                                id={page.id}
                                 title={page.title}
                             />
                         )) 

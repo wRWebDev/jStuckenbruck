@@ -24,15 +24,19 @@ const listOfSections = [
 
 import Dashboard from './Dashboard'
 import EventSelect from './Events/EventSelect'
+import EventEdit from './Events/EventEdit'
 import ImageSelect from './Images/ImageSelect'
 import PageSelect from './Pages/PageSelect'
+import PageEdit from './Pages/PageEdit'
 import VideoSelect from './Videos/VideoSelect'
 
 export {
     listOfSections,
     Dashboard,
     EventSelect,
+    EventEdit,
     ImageSelect,
     PageSelect,
+    PageEdit,
     VideoSelect
 }

@@ -25,7 +25,7 @@ Admin Area:
     [o] Settings Page
         [-] Login Module
             [-] Login functionality
-            [ ] Style login page
+            [-] Style login page
         [o] Admin Area Module
             [-] House-style elements
                 [-] Header
@@ -36,7 +36,17 @@ Admin Area:
             [-] Section switch
             [o] Individual sections
                 [-] Dashboard
-                [ ] Page selector
-                [ ] Event selector
+                [-] Page selector
+                    [ ] Page editor
+                [-] Event selector
+                    [ ] Add event
+                    [ ] Event editor
                 [ ] Image selector
+                    [ ] Add image
+                    [ ] Image editor
                 [ ] Video selector
+                    [ ] Add video
+                    [ ] Video editor
+            [ ] Components
+                [ ] Form Components
+                

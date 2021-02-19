@@ -18,6 +18,8 @@
   padding: 50pt 25px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
 }
 
 .loginPageWrapper form {

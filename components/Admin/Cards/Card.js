@@ -1,6 +1,7 @@
-const Card = ({ title = String, subtitle = String, image = String }) => {
+const Card = ({ id = String, title = String, subtitle = String, image = String, action = Function }) => {
     return (
         <div
+            onClick={() => {action(id)}}
             style={{
                 background: '#fff',
                 color: '#000',
@@ -13,11 +14,14 @@ const Card = ({ title = String, subtitle = String, image = String }) => {
                 justifyContent: 'center',
                 margin: '20pt',
                 textAlign: 'center',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: 'pointer',
+                padding: 10,
+                whiteSpace: 'pre-line'
             }}
         >
             <strong>{title}</strong>
-            <span style={{marginTop: 10}}>{subtitle}</span>
+            {subtitle && <span style={{marginTop: 10, fontSize: '0.8rem'}}>{subtitle}</span>}
         </div>
     )
 }
