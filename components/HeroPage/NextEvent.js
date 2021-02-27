@@ -1,7 +1,6 @@
-import firebase from '../../../db/firebase'
-import { separatePerformances } from '../../Events/separation'
+import firebase from '../../db/firebase'
+import { separatePerformances } from '../Events/separation'
 import { useEffect, useState } from 'react'
-import next from 'next'
 
 const NextEvent = () => {
 

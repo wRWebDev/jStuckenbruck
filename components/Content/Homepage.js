@@ -5,13 +5,12 @@
 */
 
 import FullPageCarousel from '../FullPageCarousel'
-import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../ContactForm'
 import reactStringReplace from 'react-string-replace'
 import AOS from 'aos'
 import { useEffect } from 'react'
-import NextEvent from './HeroPage/NextEvent'
+import { NextEvent, ScrollAnimation, SectionImage, Button } from '../HeroPage'
 
 /* 
     Function to wrap any words from inside [square brackets] 
@@ -41,79 +40,46 @@ const Content = ({ content, biography }) => {
                 folder="homepage-carousel"
                 images={images}
             >
-                <div className="scrollDown">
-                    <span /><span /><span />
-                </div>
+                <ScrollAnimation />
             </FullPageCarousel>
 
             {/* Biography */}
             <section className="homepageSection biog">
-                <div 
-                    className="image"
-                    data-aos="fade-right"    
-                >
-                    <Image 
-                        src={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/closeup.jpg`}
-                        layout="responsive"
-                        width={250}
-                        height={250}
-                    />
-                </div>
+                <SectionImage
+                    img={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/closeup.jpg`}
+                    direction="right"
+                />
                 <article>
                     <h2 data-aos="fade-left">Johann Stuckenbruck</h2>
                     <p data-aos="fade-left">
                         {highlightBio(firstPara)}
                     </p>
-                    <div data-aos="fade-up">
-                        <Link href="/biography">
-                            <button>
-                                Read more
-                            </button>
-                        </Link>
-                    </div>
+                    <Button 
+                        link="/biography"
+                        text="Read more"
+                    />
                 </article>
-                <div 
-                    className="scrollDown" 
-                    data-aos="fade-down"
-                >
-                    <span /><span /><span />
-                </div>
+                <ScrollAnimation />
             </section>
             
             {/* Next event */}
             <section className="homepageSection event">
-                <div 
-                    className="image"
-                    data-aos="fade-left"    
-                >
-                    <Image 
-                        src={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/concerthall.jpg`}
-                        layout="responsive"
-                        width={250}
-                        height={250}
-                    />
-                </div>
+                <SectionImage
+                    img={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/concerthall.jpg`}
+                    direction="left"
+                />
                 <div 
                     data-aos="fade-right" 
                     className="eventInfo"
                 >
                     <h2>Next Performance</h2>
                     <NextEvent />
-                    <div data-aos="fade-up">
-                        <Link href="/schedule">
-                            <button>
-                                See more
-                            </button>
-                        </Link>
-                    </div>
+                    <Button 
+                        link="/schedule"
+                        text="See more"
+                    />
                 </div>
-                <div 
-                    className="scrollDown" 
-                    data-aos="fade-down"
-                    style={{filter: 'invert(1)'}}
-                >
-                    <span /><span /><span />
-                </div>
+                <ScrollAnimation inverted={true} />
             </section>
 
             {/* Contact form */}
