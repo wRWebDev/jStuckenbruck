@@ -16,10 +16,10 @@ const pageDetails = {
   description: 'Welcome to the website of conductor, Johann Stuckenbruck.',
   image: '',
   darkMode: true,
-  hideFooter: true
+  hideFooter: false
 }
 
-const Page = ({ content }) => {
+const Page = ({ content, biography }) => {
  
   /* 
     Remove the background and background blur from the top banner
@@ -33,7 +33,10 @@ const Page = ({ content }) => {
   return (
     <>
       <HouseStyle properties={pageDetails}>
-        <Content content={content} />
+        <Content 
+          content={content} 
+          biography={biography}  
+        />
       </HouseStyle>
     </>
   )
@@ -45,7 +48,19 @@ export async function getServerSideProps(ctx){
     .collection('pages')
     .doc(pageDetails.name)
     .get()
-  return { props: { content: pageData.data() } }
+
+  const biog = await firebase
+    .firestore()
+    .collection('pages')
+    .doc('about')
+    .get()
+
+  return { 
+    props: { 
+      content: pageData.data(),
+      biography: biog.data()
+    } 
+  }
 }
 
 export default Page

@@ -47,9 +47,10 @@ export default function Download({ coverImage }){
         >
             <img src={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/closeup.jpg`} />
             <div className={styles.downloadText}>
-                <h2>Need an up to date biography?</h2>
+                <h2>Need to use Johann's biography?</h2>
                 <p>Please remember that permission should be sought before reproducing Johann's biography in promotional materials, digital or printed.</p>
-                <p>Use the button below to send a request for Johann's most up-to-date biography, and consent to distribute.</p>
+                <p>Request an up to date biography via the contact page.</p>
+                {/* <p>Use the button below to send a request for Johann's most up-to-date biography, and consent to distribute.</p>
                 <div
                     className={styles.requestButton}
                     onClick={() => {if(!buttonOpen){setButtonOpenTo(!buttonOpen)}}}
@@ -74,7 +75,7 @@ export default function Download({ coverImage }){
                             : userText
                     }
                 </div>
-                {error ? <h5>{error}</h5> : ''}
+                {error ? <h5>{error}</h5> : ''} */}
             </div>
         </section>
     )
