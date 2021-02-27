@@ -93,7 +93,10 @@ const Content = ({ content, biography }) => {
                         height={250}
                     />
                 </div>
-                <div data-aos="fade-right">
+                <div 
+                    data-aos="fade-right" 
+                    className="eventInfo"
+                >
                     <h2>Next Performance</h2>
                     <NextEvent />
                     <div data-aos="fade-up">
@@ -103,6 +106,13 @@ const Content = ({ content, biography }) => {
                             </button>
                         </Link>
                     </div>
+                </div>
+                <div 
+                    className="scrollDown" 
+                    data-aos="fade-down"
+                    style={{filter: 'invert(1)'}}
+                >
+                    <span /><span /><span />
                 </div>
             </section>
 

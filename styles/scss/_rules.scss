@@ -194,6 +194,8 @@ svg:hover{
 	100%    {opacity: 0;}
 }
 
+$buttonExpandsTo: 20px;
+
 section.homepageSection{
     position: relative;
     background: #f7f7f7;
@@ -219,7 +221,7 @@ section.homepageSection{
             border-right: 2px solid #3c4d33;
             transition: border 300ms ease;
             &:hover{
-                border-right: 5px solid #3c4d33;
+                border-right: $buttonExpandsTo solid #3c4d33;
             }
         }
 
@@ -269,9 +271,32 @@ section.homepageSection{
 
     &.event{
         display: flex;
-        flex-direction: row-reverse;
+        flex-flow: row-reverse wrap;
         align-items: center;
         justify-content: center;
+
+        .eventInfo{
+            margin: 20pt;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+            p{
+                width: 350px;
+                max-width: 90%;
+            }
+            @media only screen and (max-width: $MOBILE) {
+                min-width: calc(100vw - 2 * #{$mobile-margin});
+                align-items: center;
+                justify-content: center;
+                h2,
+                p{
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
 
         button{
             color: #000;
@@ -280,7 +305,7 @@ section.homepageSection{
             border-left: 2px solid #A92626;
             transition: border 300ms ease;
             &:hover{
-                border-left: 5px solid #A92626;
+                border-left: $buttonExpandsTo solid #A92626;
             }
         }
 

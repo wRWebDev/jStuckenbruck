@@ -320,7 +320,7 @@ section.homepageSection.biog button {
 }
 
 section.homepageSection.biog button:hover {
-  border-right: 5px solid #3c4d33;
+  border-right: 20px solid #3c4d33;
 }
 
 section.homepageSection.biog article {
@@ -388,14 +388,54 @@ section.homepageSection.event {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+section.homepageSection.event .eventInfo {
+  margin: 20pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+section.homepageSection.event .eventInfo p {
+  width: 350px;
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.homepageSection.event .eventInfo {
+    min-width: calc(100vw - 2 * 20px);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.homepageSection.event .eventInfo h2,
+  section.homepageSection.event .eventInfo p {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 section.homepageSection.event button {
@@ -408,7 +448,7 @@ section.homepageSection.event button {
 }
 
 section.homepageSection.event button:hover {
-  border-left: 5px solid #A92626;
+  border-left: 20px solid #A92626;
 }
 
 section.homepageSection.event h4 {
