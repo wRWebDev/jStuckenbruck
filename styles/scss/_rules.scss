@@ -157,25 +157,117 @@ svg:hover{
     }
 }
 
-/* iv. Animations */
-.struggle-arrow-down{
-    animation: struggle-down 1000ms ease infinite;
+.scrollDown{
+    width: 40px;
+	height: 120px;
+	position: absolute;
+	left: 20pt;
+	bottom: 20pt;
+    transform: scale(0.7, 1);
+
+	span {
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-right: 2px solid white;
+		border-bottom: 2px solid white;
+		transform: rotate(45deg);
+		fill: transparent;
+		stroke-width: 1px;
+		animation: scrollArrow 2s infinite;
+
+		&:nth-child(1) {
+			animation-delay: -1s;
+		}
+		&:nth-child(2) {
+			animation-delay: -0.5s;
+		}
+		&:nth-child(3) {
+			animation-delay: 0s;
+		}
+	}
 }
-@keyframes struggle-right {
-    0% {transform: translateX(0)}
-    27% {transform: translateX(7px)}
-    38% {transform: translateX(4px)}
-    50% {transform: translateX(6px)}
-    57% {transform: translateX(4px)}
-    64% {transform: translateX(7px)}
-    100% {transform: translateX(0)}
+
+@keyframes scrollArrow {
+	0%      {opacity: 0;}
+	40%     {opacity: 1;}
+	80%     {opacity: 0;}
+	100%    {opacity: 0;}
 }
-@keyframes struggle-down {
-    0% {transform: translateY(0) rotate(90deg)}
-    27% {transform: translateY(7px) rotate(90deg)}
-    38% {transform: translateY(4px) rotate(90deg)}
-    50% {transform: translateY(6px) rotate(90deg)}
-    57% {transform: translateY(4px) rotate(90deg)}
-    64% {transform: translateY(7px) rotate(90deg)}
-    100% {transform: translateY(0) rotate(90deg)}
+
+section.homepageSection{
+    position: relative;
+    background: #f7f7f7;
+    color: #000;
+    padding: 25vh $mobile-margin;
+
+    &.biog{
+        background: #f7f7f7;
+        color: #000;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        button{
+            color: #000;
+            background: transparent;
+            border-right: 2px solid rgba(31, 97, 45, 0.5);
+            transition: border 300ms ease;
+            &:hover{
+                border-right: 5px solid rgba(31, 97, 45, 0.5);
+            }
+        }
+
+        article{
+            text-align: right;
+        }
+
+        p{
+            width: 350px;
+            max-width: 90%;
+        }
+    }
+
+    .image{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: #252525;
+        overflow: hidden;
+        margin: 20pt;
+    }
+    
+    article{
+        margin: 20pt;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+    button{
+        font-size: 1rem;
+        padding: 5pt 10pt;
+        border: none;
+        color: #fff;
+        margin: 10pt 0;
+        display: block;
+    }
+
+    &.contact{
+        form{
+            label{
+                color: #000 !important;
+                input,
+                textarea{
+                    background: #fff !important;
+                }
+                button{
+                    background: #000 !important;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
