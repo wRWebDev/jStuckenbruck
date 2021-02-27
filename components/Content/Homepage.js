@@ -11,6 +11,7 @@ import ContactForm from '../ContactForm'
 import reactStringReplace from 'react-string-replace'
 import AOS from 'aos'
 import { useEffect } from 'react'
+import NextEvent from './HeroPage/NextEvent'
 
 /* 
     Function to wrap any words from inside [square brackets] 
@@ -25,7 +26,7 @@ const Content = ({ content, biography }) => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1000
+            duration: 600
         })
     }, [])
 
@@ -41,9 +42,7 @@ const Content = ({ content, biography }) => {
                 images={images}
             >
                 <div className="scrollDown">
-                    <span />
-                    <span />
-                    <span />
+                    <span /><span /><span />
                 </div>
             </FullPageCarousel>
 
@@ -75,7 +74,6 @@ const Content = ({ content, biography }) => {
                 </article>
                 <div 
                     className="scrollDown" 
-                    style={{filter: 'invert(1)'}}
                     data-aos="fade-down"
                 >
                     <span /><span /><span />
@@ -84,9 +82,33 @@ const Content = ({ content, biography }) => {
             
             {/* Next event */}
             <section className="homepageSection event">
-                Event here
+                <div 
+                    className="image"
+                    data-aos="fade-left"    
+                >
+                    <Image 
+                        src={`${process.env.NEXT_PUBLIC_BUCKET}/media/images/concerthall.jpg`}
+                        layout="responsive"
+                        width={250}
+                        height={250}
+                    />
+                </div>
+                <div data-aos="fade-right">
+                    <h2>Next Performance</h2>
+                    <NextEvent />
+                    <div data-aos="fade-up">
+                        <Link href="/schedule">
+                            <button>
+                                See more
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </section>
+
+            {/* Contact form */}
             <section className="homepageSection contact">
+                <h2 data-aos="fade-up">Get in touch</h2>
                 <ContactForm />
             </section>
         </>

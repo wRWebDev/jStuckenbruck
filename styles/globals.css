@@ -219,9 +219,7 @@ svg:hover .youtube {
   height: 120px;
   position: absolute;
   left: 20pt;
-  bottom: 20pt;
-  -webkit-transform: scale(0.7, 1);
-          transform: scale(0.7, 1);
+  bottom: 5pt;
 }
 
 .scrollDown span {
@@ -290,9 +288,13 @@ section.homepageSection {
   padding: 25vh 20px;
 }
 
+section.homepageSection h2 {
+  font-size: 2rem;
+}
+
 section.homepageSection.biog {
-  background: #f7f7f7;
-  color: #000;
+  background: #000;
+  color: #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,36 +311,19 @@ section.homepageSection.biog {
 }
 
 section.homepageSection.biog button {
-  color: #000;
+  color: #f7f7f7;
+  font-family: Montserrat, sans-serif;
   background: transparent;
-  border-right: 2px solid rgba(31, 97, 45, 0.5);
+  border-right: 2px solid #3c4d33;
   -webkit-transition: border 300ms ease;
   transition: border 300ms ease;
 }
 
 section.homepageSection.biog button:hover {
-  border-right: 5px solid rgba(31, 97, 45, 0.5);
+  border-right: 5px solid #3c4d33;
 }
 
 section.homepageSection.biog article {
-  text-align: right;
-}
-
-section.homepageSection.biog p {
-  width: 350px;
-  max-width: 90%;
-}
-
-section.homepageSection .image {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: #252525;
-  overflow: hidden;
-  margin: 20pt;
-}
-
-section.homepageSection article {
   margin: 20pt;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,15 +338,99 @@ section.homepageSection article {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  text-align: right;
+}
+
+section.homepageSection.biog article p {
+  width: 350px;
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.homepageSection.biog article {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.homepageSection.biog article h2,
+  section.homepageSection.biog article p {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+section.homepageSection .image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #252525;
+  overflow: hidden;
+  margin: 20pt;
 }
 
 section.homepageSection button {
   font-size: 1rem;
   padding: 5pt 10pt;
   border: none;
+  font-weight: 600;
   color: #fff;
   margin: 10pt 0;
   display: block;
+}
+
+section.homepageSection.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.homepageSection.event button {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  background: transparent;
+  border-left: 2px solid #A92626;
+  -webkit-transition: border 300ms ease;
+  transition: border 300ms ease;
+}
+
+section.homepageSection.event button:hover {
+  border-left: 5px solid #A92626;
+}
+
+section.homepageSection.event h4 {
+  color: #A92626;
+}
+
+section.homepageSection.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  color: #fff;
 }
 
 section.homepageSection.contact form label {
@@ -370,12 +439,12 @@ section.homepageSection.contact form label {
 
 section.homepageSection.contact form label input,
 section.homepageSection.contact form label textarea {
-  background: #fff !important;
+  background: #f7f7f7 !important;
 }
 
 section.homepageSection.contact form label button {
-  background: #000 !important;
-  color: #fff;
+  -webkit-filter: invert(1) !important;
+          filter: invert(1) !important;
 }
 
 /* Global classes */
