@@ -23,6 +23,7 @@ const Dashboard = ({ changeSection }) => {
                             margin: '10pt',
                             cursor: 'pointer'
                         }}
+                        key={i}
                         onClick={()=>{changeSection(section.name)}}
                     >
                         <img 

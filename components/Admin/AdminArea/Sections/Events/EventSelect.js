@@ -3,11 +3,7 @@ import { Card, NewItem } from '../../../Cards'
 import firebase from '../../../../../db/firebase'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
-const convertDate = date => (new Date(date).toLocaleDateString('en-GB', { 
-    day: 'numeric',
-    month: 'short',
-    year: '2-digit'
-}))
+import { convertDate } from '../../../lib/convertDate'
 
 const EventSelect = ({ changeSection }) => {
 
@@ -17,14 +13,31 @@ const EventSelect = ({ changeSection }) => {
             idField: 'id'
         }
     )
-
-    const addEvent = () => {
-        console.log('running addEvent()...')        
-    }
-
+    
     const editEvent = id => {
         console.log('Trying to navigate to ', id)
         changeSection('Schedule Edit', id)
+    }
+
+    const addEvent = () => {
+        firebase.
+            firestore()
+            .collection('schedule')
+            .add({
+                institution: '',
+                link: '',
+                status: '',
+                performances: [],
+                repertoire: [],
+                startDate: new Date(),
+                endDate: new Date()
+            })
+            .then(doc => {
+                console.log('Created event with id', doc.id)
+                setTimeout(()=>{
+                    editEvent(doc.id)
+                }, 1000)
+            })        
     }
 
     return (

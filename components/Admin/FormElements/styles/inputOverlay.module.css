@@ -1,0 +1,117 @@
+.pageCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -99;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease;
+  transition: opacity 150ms ease;
+}
+
+.pageCover .overlay {
+  width: 500px;
+  max-width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  padding: 30pt;
+  border-radius: 10px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.addButton {
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px dashed rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 3pt 0 5pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2pt 0 10pt 0;
+  border-radius: 7px;
+  font-size: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+}
+
+.addButton:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  border: 2px solid #fff;
+  margin-bottom: 10pt;
+  padding: 10pt;
+  border-radius: 7px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.item .deleteButton {
+  position: absolute;
+  top: 50%;
+  right: 10pt;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12pt;
+  height: 12pt;
+  font-size: 8pt;
+  padding: 0 0 1pt 0.5pt;
+  line-height: 10pt;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+}
+
+.item .deleteButton:hover {
+  background: #fff;
+  color: #000;
+}

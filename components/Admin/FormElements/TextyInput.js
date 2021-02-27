@@ -1,13 +1,13 @@
 import styles from './styles/textInput.module.css'
 
 const TextyInput = ({ 
-    type = String,
+    type = '',
     changeHandler = Function, 
-    value = String,
-    name = String,
-    label = String,
-    placeholder = String,
-    autoComplete = String 
+    value = '',
+    name = '',
+    label = '',
+    placeholder = '',
+    autoComplete = '' 
 }) => {
     return (
         <label className={styles.adminTextInput}>

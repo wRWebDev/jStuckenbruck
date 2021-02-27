@@ -26,9 +26,11 @@ import Dashboard from './Dashboard'
 import EventSelect from './Events/EventSelect'
 import EventEdit from './Events/EventEdit'
 import ImageSelect from './Images/ImageSelect'
+import ImageEdit from './Images/ImageEdit'
 import PageSelect from './Pages/PageSelect'
 import PageEdit from './Pages/PageEdit'
 import VideoSelect from './Videos/VideoSelect'
+import VideoEdit from './Videos/VideoEdit'
 
 export {
     listOfSections,
@@ -36,7 +38,9 @@ export {
     EventSelect,
     EventEdit,
     ImageSelect,
+    ImageEdit,
     PageSelect,
     PageEdit,
-    VideoSelect
+    VideoSelect,
+    VideoEdit
 }

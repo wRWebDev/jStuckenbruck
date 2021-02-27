@@ -10,35 +10,41 @@
 .adminTextInput input,
 .adminTextInput textarea {
   width: 100%;
-  padding: 10pt 0;
+  padding: 10pt;
   color: #fff;
-  text-align: center;
+  text-align: left;
   background: transparent;
   border: 2px solid #fff;
   border-radius: 7px;
   font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2pt;
 }
 
 .adminTextInput input::-webkit-input-placeholder,
 .adminTextInput textarea::-webkit-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  font-style: italic;
 }
 
 .adminTextInput input:-ms-input-placeholder,
 .adminTextInput textarea:-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  font-style: italic;
 }
 
 .adminTextInput input::-ms-input-placeholder,
 .adminTextInput textarea::-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  font-style: italic;
 }
 
 .adminTextInput input::placeholder,
 .adminTextInput textarea::placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  font-style: italic;
 }

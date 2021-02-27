@@ -13,14 +13,6 @@ Johann's Comments:
     [-] Biog - bolder text for institutions
     [-] Media - turn off auto-play on carousel
 
-Editor: 
-    [ ] Page content Editor
-    [ ] Homepage image selector
-    [ ] Gallery Editor
-    [ ] Video Editor
-    [ ] Event Editor
-
-
 Admin Area: 
     [o] Settings Page
         [-] Login Module
@@ -36,17 +28,34 @@ Admin Area:
             [-] Section switch
             [o] Individual sections
                 [-] Dashboard
-                [-] Page selector
-                    [ ] Page editor
-                [-] Event selector
+                [o] Pages
+                    [-] Page selector
+                    [o] Page editor
+                        [-] General elements (title & body)
+                        [ ] Page specific elements: 
+                            [ ] Home: Image selector
+                            [ ] Biog: Quote fields
+                [o] Events
+                    [-] Event selector
                     [ ] Add event
                     [ ] Event editor
-                [ ] Image selector
+                [o] Images
+                    [-] Image selector
                     [ ] Add image
                     [ ] Image editor
-                [ ] Video selector
+                [o] Videos
+                    [-] Video selector
                     [ ] Add video
                     [ ] Video editor
-            [ ] Components
-                [ ] Form Components
-                
+                [ ] Settings
+                    [ ] Password updater
+            [o] Components
+                [o] Form Components
+                    [-] Texty (text, email, password etc.)
+                    [-] Textarea
+                    [-] Button
+                    [ ] Date/Time
+                [ ] Image editor
+                    [ ] Functionality
+                    [ ] Styling
+                [ ] Image selector
