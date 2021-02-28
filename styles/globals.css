@@ -281,212 +281,6 @@ svg:hover .youtube {
   }
 }
 
-section.homepageSection {
-  position: relative;
-  background: #f7f7f7;
-  color: #000;
-  padding: 25vh 20px;
-}
-
-section.homepageSection h2 {
-  font-size: 2rem;
-}
-
-section.homepageSection.biog {
-  background: #000;
-  color: #f7f7f7;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-section.homepageSection.biog button {
-  color: #f7f7f7;
-  font-family: Montserrat, sans-serif;
-  background: transparent;
-  border-right: 2px solid #3c4d33;
-  -webkit-transition: border 300ms ease;
-  transition: border 300ms ease;
-}
-
-section.homepageSection.biog button:hover {
-  border-right: 20px solid #3c4d33;
-}
-
-section.homepageSection.biog article {
-  margin: 20pt;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-align: right;
-}
-
-section.homepageSection.biog article p {
-  width: 350px;
-  max-width: 90%;
-}
-
-@media only screen and (max-width: 700px) {
-  section.homepageSection.biog article {
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section.homepageSection.biog article h2,
-  section.homepageSection.biog article p {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-section.homepageSection .image {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: #252525;
-  overflow: hidden;
-  margin: 20pt;
-}
-
-section.homepageSection button {
-  font-size: 1rem;
-  padding: 5pt 10pt;
-  border: none;
-  font-weight: 600;
-  color: #fff;
-  margin: 10pt 0;
-  display: block;
-}
-
-section.homepageSection.event {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse wrap;
-          flex-flow: row-reverse wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-section.homepageSection.event .eventInfo {
-  margin: 20pt;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: left;
-}
-
-section.homepageSection.event .eventInfo p {
-  width: 350px;
-  max-width: 90%;
-}
-
-@media only screen and (max-width: 700px) {
-  section.homepageSection.event .eventInfo {
-    min-width: calc(100vw - 2 * 20px);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section.homepageSection.event .eventInfo h2,
-  section.homepageSection.event .eventInfo p {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-section.homepageSection.event button {
-  color: #000;
-  font-family: Montserrat, sans-serif;
-  background: transparent;
-  border-left: 2px solid #A92626;
-  -webkit-transition: border 300ms ease;
-  transition: border 300ms ease;
-}
-
-section.homepageSection.event button:hover {
-  border-left: 20px solid #A92626;
-}
-
-section.homepageSection.event h4 {
-  color: #A92626;
-}
-
-section.homepageSection.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #000;
-  color: #fff;
-}
-
-section.homepageSection.contact form label {
-  color: #000 !important;
-}
-
-section.homepageSection.contact form label input,
-section.homepageSection.contact form label textarea {
-  background: #f7f7f7 !important;
-}
-
-section.homepageSection.contact form label button {
-  -webkit-filter: invert(1) !important;
-          filter: invert(1) !important;
-}
-
 /* Global classes */
 .flex-center {
   display: -webkit-box;
@@ -2731,4 +2525,241 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="flip-down"].aos-animate {
   -webkit-transform: perspective(2500px) rotateX(0);
           transform: perspective(2500px) rotateX(0);
+}
+
+section.homepageSection {
+  position: relative;
+  background: #f7f7f7;
+  color: #000;
+  padding: 25vh 20px;
+}
+
+section.homepageSection h2 {
+  font-size: 2rem;
+}
+
+section.homepageSection.biog {
+  background: #000;
+  color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.homepageSection.biog button {
+  color: #f7f7f7;
+  font-family: Montserrat, sans-serif;
+  background: transparent;
+  border-right: 2px solid #3c4d33;
+  -webkit-transition: border 300ms ease;
+  transition: border 300ms ease;
+}
+
+section.homepageSection.biog button:hover {
+  border-right: 20px solid #3c4d33;
+}
+
+section.homepageSection.biog article {
+  margin: 20pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+}
+
+section.homepageSection.biog article p {
+  width: 350px;
+  max-width: 90%;
+  line-height: 1.7rem;
+  font-size: 1rem;
+  letter-spacing: 0.07rem;
+  white-space: pre-line;
+}
+
+@media only screen and (max-width: 700px) {
+  section.homepageSection.biog article {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.homepageSection.biog article h2,
+  section.homepageSection.biog article p {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+section.homepageSection .image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #252525;
+  overflow: hidden;
+  margin: 20pt;
+}
+
+section.homepageSection button {
+  font-size: 1rem;
+  padding: 5pt 10pt;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  margin: 10pt 0;
+  display: block;
+}
+
+section.homepageSection.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.homepageSection.event .eventInfo {
+  margin: 20pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+section.homepageSection.event .eventInfo p {
+  width: 350px;
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.homepageSection.event .eventInfo {
+    min-width: calc(100vw - 2 * 20px);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.homepageSection.event .eventInfo h2,
+  section.homepageSection.event .eventInfo p {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+section.homepageSection.event button {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  background: transparent;
+  border-left: 2px solid #A92626;
+  -webkit-transition: border 300ms ease;
+  transition: border 300ms ease;
+}
+
+section.homepageSection.event button:hover {
+  border-left: 20px solid #A92626;
+}
+
+section.homepageSection.event h4 {
+  color: #A92626;
+}
+
+section.homepageSection.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  color: #fff;
+}
+
+section.homepageSection.contact form label {
+  color: #fff !important;
+  font-style: italic;
+}
+
+section.homepageSection.contact form label input,
+section.homepageSection.contact form label textarea {
+  background: transparent !important;
+  border-bottom: 2px solid #fff !important;
+  border-radius: 0;
+  color: #fff;
+}
+
+section.homepageSection.contact form label input::-webkit-input-placeholder,
+section.homepageSection.contact form label textarea::-webkit-input-placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+section.homepageSection.contact form label input:-ms-input-placeholder,
+section.homepageSection.contact form label textarea:-ms-input-placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+section.homepageSection.contact form label input::-ms-input-placeholder,
+section.homepageSection.contact form label textarea::-ms-input-placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+section.homepageSection.contact form label input::placeholder,
+section.homepageSection.contact form label textarea::placeholder {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+section.homepageSection.contact form label button {
+  color: blue !important;
 }

@@ -60,8 +60,17 @@ const NextEvent = () => {
                     ? ''
                     : <>
                         <h3>{nextEvent.institution}</h3>
-                        <em>{nextEvent.location}</em>
+                        {
+                            !nextEvent.location
+                                ? ''
+                                : <p><em>{nextEvent.location}</em></p>
+                        }
                         <p>{nextEvent.date}</p>
+                        {
+                            !nextEvent.programme
+                                ? ''
+                                : <p>{nextEvent.programme}</p>
+                        }
                         <h4>{nextEvent.status}</h4>
                     </>
             }

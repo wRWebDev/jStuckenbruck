@@ -15,16 +15,16 @@ export default function TitleCard({ title = String, image = String }){
     const parallaxScroll = () => {
         const el = document.getElementById('biogTitleCard')
         let offset = window.pageYOffset
-        el.style.backgroundPositionY = `${-offset * 0.3}px`
+        el.style.backgroundPositionY = `${offset * -0.7}px`
     }
 
     useEffect(() => {
         /* Extend the cover photo behind the menu */
-        document.querySelector('main').style.marginTop = 0
+        // document.querySelector('main').style.marginTop = 0
         /* ON COMPONENT MOUNT: Add scroll listener to make parallax effect */
-        document.addEventListener('scroll', parallaxScroll)
+        // document.addEventListener('scroll', parallaxScroll)
         /* ON COMPONENT DISMOUNT: Remove scroll listener */
-        return () => document.removeEventListener('scroll', parallaxScroll)
+        // return () => document.removeEventListener('scroll', parallaxScroll)
     }, [])
 
     return (
