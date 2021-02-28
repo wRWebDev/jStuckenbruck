@@ -10,6 +10,7 @@ const PageEdit = ({ id }) => {
 
     const [ title, setTitleTo ] = useState('')
     const [ body, setBodyTo ] = useState('')
+    const [ saving, setSavingTo ] = useState(false)
 
     useEffect(()=>{
         if(data && !title){
@@ -18,7 +19,18 @@ const PageEdit = ({ id }) => {
         }
     }, [data])
     
-    console.log(title, body)
+    const saveChanges = () => {
+        setSavingTo(true)
+        
+        firebase.firestore().collection('pages').doc(id).update({
+            title,
+            body
+        })
+
+        setTimeout(()=>{
+            setSavingTo(false)
+        }, 1000)
+    }
 
     return (
         <>
@@ -44,11 +56,12 @@ const PageEdit = ({ id }) => {
                                         value={body}
                                         name="body"
                                         label="Main content"
-                                        // placeholder=""
                                     /> : ''
                             }
                             <Button 
-                                type="submit"
+                                clickHandler={saveChanges}
+                                type="button"
+                                disabled={saving}
                             />
                         </form>
                 }{

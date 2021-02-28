@@ -46,7 +46,7 @@ const Menu = ({ changeSection }) => {
                     className={styles.adminMenuSignOut}
                     onClick={() => auth.signOut()}
                 >
-                    Sign out
+                    Sign Out
                 </li>
             </ul>
         </div>
